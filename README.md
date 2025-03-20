@@ -1,1 +1,1 @@
-Just learning how to use github.
+For educational purposes only.
