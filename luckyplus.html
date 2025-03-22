@@ -367,39 +367,64 @@ button {
   </tr>
 </table>
 
-<div class="box">
-<button class="popbox" popovertarget="modal">Collections</button>
-<div id="modal" class="popbox-data" popover>
-<h2>Collection List</h2>
-<p>
-<li>G720 *9</li>
-<li>W720 *1</li>
-<li>W402 </li>
-<li>W029 </li>
-<li>W952 </li>
-<li>G286 </li>
-<li>W286 </li>
-<li>W009 </li>
-<li>W638 </li>
-</p>
-<button class="popbox" popovertarget="modal">    Close</button>
-<span class="foot">Only use main accounts for withdrawal.</span>
+<style>
+    .box-container {
+        display: flex;
+        gap: 0px;
+    }
+</style>
+
+<div class="box-container">
+    <div class="box">
+        <button class="popbox" popovertarget="modal1">Collections</button>
+        <div id="modal1" class="popbox-data" popover>
+            <h2>Collection List</h2>
+            <ul>
+                <li>G720 *9</li>
+                <li>W720 *1</li>
+                <li>W402</li>
+                <li>W029</li>
+                <li>W952</li>
+                <li>G286</li>
+                <li>W286</li>
+                <li>W009</li>
+                <li>W638</li>
+            </ul>
+            <button class="popbox" popovertarget="modal1">Close</button>
+            <span class="foot">Only use main accounts for withdrawal.</span>
+        </div>
+    </div>
+
+    <div class="box">
+        <button class="popbox" popovertarget="modal2">Promo info.</button>
+        <div id="modal2" class="popbox-data" popover>
+            <h2>Promo Information</h2>
+            <p>
+                <a href="https://www.casinoplus.com.ph/home" target="_blank">
+                    <img src="https://winsangalang.github.io/img/luckyday.png" alt="LUCKY PLUS">
+                </a>
+            </p>
+            <button class="popbox" popovertarget="modal2">Close</button>
+            <span class="foot"><a href="https://www.casinoplus.com.ph/home" target="_blank">
+        </a></span>
+        </div>
+    </div>
 </div>
-</div>
-<center>
+
 <script>
-        function toggleMenu() {
+    function toggleMenu() {
+        var dropdown = document.getElementById("dropdownMenu");
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    }
+
+    document.addEventListener("click", function(event) {
+        var menu = document.querySelector(".menu-container");
+        if (menu && !menu.contains(event.target)) {
             var dropdown = document.getElementById("dropdownMenu");
-            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+            if (dropdown) dropdown.style.display = "none";
         }
-        
-        document.addEventListener("click", function(event) {
-            var menu = document.querySelector(".menu-container");
-            if (!menu.contains(event.target)) {
-                document.getElementById("dropdownMenu").style.display = "none";
-            }
-        });
-    </script>
+    });
+</script>
 <!-- property of sherwin Sangalang-->
 <center>
 <script>
