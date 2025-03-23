@@ -4,67 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editable List</title>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <ul id="dynamicList"></ul>
     <button onclick="addItem()">Add Item</button>
-    
-    <script>
-        const itemList = [
-            "G720 *10",
-            "W720",
-            "W402 *2",
-            "W029 *1",
-            "W952",
-            "G286 *2",
-            "W286 *1",
-            "W009",
-            "W638 *1"
-        ];
-
-        function renderList() {
-            const ul = document.getElementById("dynamicList");
-            ul.innerHTML = "";
-            itemList.forEach((item, index) => {
-                const li = document.createElement("li");
-                li.textContent = item;
-                
-                const editButton = document.createElement("button");
-                editButton.textContent = "Edit";
-                editButton.onclick = () => editItem(index);
-                
-                const deleteButton = document.createElement("button");
-                deleteButton.textContent = "Delete";
-                deleteButton.onclick = () => deleteItem(index);
-                
-                li.appendChild(editButton);
-                li.appendChild(deleteButton);
-                ul.appendChild(li);
-            });
-        }
-
-        function editItem(index) {
-            const newValue = prompt("Edit item:", itemList[index]);
-            if (newValue) {
-                itemList[index] = newValue;
-                renderList();
-            }
-        }
-
-        function deleteItem(index) {
-            itemList.splice(index, 1);
-            renderList();
-        }
-
-        function addItem() {
-            const newItem = prompt("Enter new item:");
-            if (newItem) {
-                itemList.push(newItem);
-                renderList();
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", renderList);
-    </script>
 </body>
 </html>
