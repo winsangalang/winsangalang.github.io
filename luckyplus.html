@@ -173,6 +173,7 @@ li {
 }
      </style>
 </head>
+<script src="js/list.js" defer></script>
 <body>
 <input type="text" id="hiddenInput" style="position: absolute; left: -9999px;">
 
@@ -384,17 +385,7 @@ li {
         <button class="popbox" popovertarget="modal1">Collections</button>
         <div id="modal1" class="popbox-data" popover align="justify">
             <h2>Collected Rare</h2>
-            <ul>
-                <li>G720 *10</li>
-                <li>W720 </li>
-                <li>W402 *2</li>
-                <li>W029 *1</li>
-                <li>W952 </li>
-                <li>G286 *2</li>
-                <li>W286 *1</li>
-                <li>W009 </li>
-                <li>W638 *1</li>
-            </ul>
+            <ul id="dynamicList"></ul>
             <button class="popbox" popovertarget="modal1">Close</button>
             <span class="foot">Only use main accounts for withdrawal.</span>
         </div>
