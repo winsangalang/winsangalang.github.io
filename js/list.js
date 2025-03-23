@@ -20,12 +20,4 @@ function renderList() {
     });
 }
 
-function addItem() {
-    const newItem = prompt("Enter new item:");
-    if (newItem) {
-        itemList.push(newItem);
-        renderList();
-    }
-}
-
 document.addEventListener("DOMContentLoaded", renderList);
