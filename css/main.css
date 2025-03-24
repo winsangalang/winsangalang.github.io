@@ -33,7 +33,7 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
-.head {
+img {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
@@ -41,7 +41,7 @@ tr:nth-child(even) {
 .promo {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 40%;
+  width: 50%;
 }
 .foot {
             color: #333;
