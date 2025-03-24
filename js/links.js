@@ -14,7 +14,7 @@ const itemList = [
                 const li = document.createElement("li");
                 li.classList.add("custom-li"); // Add class to prevent affecting other lists
                 li.innerHTML = item; // Properly render anchor tags
-                il.appendChild(li);
+                ul.appendChild(li);
             });
         }
 
