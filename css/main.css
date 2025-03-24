@@ -175,3 +175,7 @@ li {
         .custom-li a:hover {
             text-decoration: underline;
         }
+ .box-container {
+        display: flex;
+        gap: 0px;
+    }
