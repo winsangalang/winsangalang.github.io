@@ -33,7 +33,7 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
-img {
+.banner {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
