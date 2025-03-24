@@ -8,7 +8,7 @@ const itemList = [
         ];
 
         function renderList() {
-            const ul = document.getElementById("dynamicList");
+            const ul = document.getElementById("dynamicLinks");
             ul.innerHTML = "";
             itemList.forEach(item => {
                 const li = document.createElement("li");
