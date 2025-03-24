@@ -122,7 +122,7 @@ button {
             cursor: pointer;
             border-radius: 5px;
             font-size: 14px;
-            margin: px;
+            margin: 5px;
             position: ;
         }
 .message-box {
@@ -145,7 +145,7 @@ button {
             font-size: 11px;
             box-shadow: -2px 0 5px rgba(0,0,0,0.5);
             border-radius: 5px 5px 5px 5px;
-            margin: px;
+            margin: 5px;
             position: relative;
         }
 .popbox-data {
