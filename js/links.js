@@ -1,13 +1,10 @@
 const itemList = [
     "<a href="https://www.casinoplus.com.ph/home" target="_blank">Casinoplus.com.ph</a>",
-    "W720",
-    "W402 *2",
-    "W029 *1",
-    "W952",
-    "G286 *2",
-    "W286 *1",
-    "W009",
-    "W638 *1"
+    "<a href="https://www.okbet.com/mobile/login" target="_blank">Okbet</a>",
+    "<a href="https://www.playtime.ph/" target="_blank">Playtime</a>",
+    "<a href="https://bingoplus.com/" target="_blank">Bingoplus</a>",
+    "<a href="https://arenaplus.ph/" target="_blank">Arenaplus</a>",
+    "<a href="https://gzone.ph/#login" target="_blank">Gamezone</a>"
 ];
 
 function renderList() {
