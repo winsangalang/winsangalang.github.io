@@ -1,5 +1,5 @@
 const itemList = [
-    "G720 *10",
+    "<a href="https://www.casinoplus.com.ph/home" target="_blank">Casinoplus.com.ph</a>",
     "W720",
     "W402 *2",
     "W029 *1",
