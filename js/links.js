@@ -8,13 +8,13 @@ const itemList = [
         ];
 
         function renderList() {
-            const ul = document.getElementById("dynamicLinks");
-            ul.innerHTML = "";
+            const span = document.getElementById("dynamicLinks");
+            span.innerHTML = "";
             itemList.forEach(item => {
                 const li = document.createElement("li");
                 li.classList.add("custom-li"); // Add class to prevent affecting other lists
                 li.innerHTML = item; // Properly render anchor tags
-                ul.appendChild(li);
+                span.appendChild(li);
             });
         }
 
