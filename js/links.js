@@ -1,4 +1,4 @@
-const itemLinks = [
+const itemList = [
             '<a href="https://www.casinoplus.com.ph/home" target="_blank">Casinoplus.com.ph</a>',
             '<a href="https://www.okbet.com/mobile/login" target="_blank">Okbet</a>',
             '<a href="https://www.playtime.ph/" target="_blank">Playtime</a>',
@@ -7,15 +7,15 @@ const itemLinks = [
             '<a href="https://gzone.ph/#login" target="_blank">Gamezone</a>'
         ];
 
-        function renderLinks() {
+        function renderList() {
             const ul = document.getElementById("dynamicLinks");
             ul.innerHTML = "";
-            itemLinks.forEach(item => {
+            itemList.forEach(item => {
                 const li = document.createElement("li");
-                li.classLinks.add("custom-li"); // Add class to prevent affecting other lists
+                li.classList.add("custom-li"); // Add class to prevent affecting other lists
                 li.innerHTML = item; // Properly render anchor tags
                 ul.appendChild(li);
             });
         }
 
-        document.addEventListener("DOMContentLoaded", renderLinks);
+        document.addEventListener("DOMContentLoaded", renderList);
