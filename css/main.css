@@ -34,14 +34,11 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 .banner {
-  font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
 }
 .promo {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
+  width: 80%;
 }
 .foot {
             color: #333;
