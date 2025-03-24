@@ -38,6 +38,11 @@ tr:nth-child(even) {
   border-collapse: collapse;
   width: 100%;
 }
+.promo {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 40%;
+}
 .foot {
             color: #333;
             font-size: 10px;
