@@ -41,7 +41,7 @@ tr:nth-child(even) {
 .promo {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 30%;
+  width: 100%;
 }
 .foot {
             color: #333;
