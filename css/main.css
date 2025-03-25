@@ -154,7 +154,7 @@ button {
             background: #fff;
             color: #333;
             border: 2px;
-            width: 80%;
+            width: 250px;
             padding: 5px 10px;
             border-radius: 5px;
             font-size: 15px;
@@ -162,7 +162,7 @@ button {
             border-radius: 5px 5px 5px 5px;
         }
 li {
-    padding: 3px;
+    padding: 5px;
 }
  /* Style specific to this list */
         .custom-li {
