@@ -1,0 +1,8 @@
+WINDOWS ALL IN-ONE TOOL
+
+TWEAKS, DEBLOATWARE, DISABLE WIN-UPDATES
+
+ChrisTitus Tool - Run Powershell as Admin and put: 
+
+iwr -useb https://christitus.com/win | iex
+
