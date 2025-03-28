@@ -7,7 +7,7 @@ const itemList = [
     "G286 ",
     "W286 ",
     "W720 ",
-    "W638 "
+    "W638 *1"
 ];
 
 function renderList() {
