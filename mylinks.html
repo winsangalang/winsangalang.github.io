@@ -99,10 +99,40 @@
       font-size: 0.8rem;
       color: #333;
     }
+    
+    img {
+      width: 60%;
+      max-width: 300px;
+      margin-bottom: 30px;
+    }
+
+    input[type="text"] {
+      width: 60%;
+      max-width: 500px;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: 1px solid #dcdcdc;
+      border-radius: 24px;
+      outline: none;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    input[type="submit"] {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 14px;
+      background-color: #f8f9fa;
+      border: 1px solid #dcdcdc;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #f1f1f1;
+    }
   </style>
 </head>
 <body>
-
   <div class="menu-bar">
     <div class="dropdown">
       <a href="https://winsangalang.github.io">Home</a>
@@ -126,6 +156,12 @@
       <a href="#">Contact</a>
     </div>
   </div>
+  <center>
+  <form action="https://www.google.com/search" method="GET">
+    <input type="text" name="q" placeholder="Search Google">
+    <input type="submit" value="Search">
+  </form>
+  </center>
   <div class="speed-dial">
     <a href="https://facebook.com" class="tile" target="_blank">
       <img src="https://www.facebook.com/favicon.ico" alt="Facebook" />
