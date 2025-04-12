@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/x-icon" href="https://winsangalang.github.io/favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyLinks</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #f5f5f5;
+    }
+ .navbar {
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .menu-bar {
+      background-color: #444;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .menu-bar .dropdown {
+      position: relative;
+    }
+
+    .menu-bar a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .menu-bar a:hover {
+      background-color: #555;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #666;
+      min-width: 160px;
+      z-index: 1;
+      top: 48px;
+    }
+
+    .dropdown-content a {
+      padding: 12px 16px;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    header {
+      background-color: #333;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    .speed-dial {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .tile {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 0.5rem;
+      transition: transform 0.2s;
+    }
+
+    .tile:hover {
+      transform: scale(1.05);
+    }
+
+    .tile img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 0.5rem;
+    }
+
+    .tile span {
+      display: block;
+      font-size: 0.8rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="menu-bar">
+    <div class="dropdown">
+      <a href="https://winsangalang.github.io">Home</a>
+    </div>
+    <div class="dropdown">
+      <a href="#">Services</a>
+      <div class="dropdown-content">
+        <a href="https://winsangalang.github.io/luckyplus.html">Luckyplus</a>
+        <a href="https://winsangalang.github.io/main.html">Files</a>
+        <a href="#">Hosting</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Portfolio</a>
+      <div class="dropdown-content">
+        <a href="#">Projects</a>
+        <a href="#">Clients</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Contact</a>
+    </div>
+  </div>
+  <div class="speed-dial">
+    <a href="https://facebook.com" class="tile">
+      <img src="https://www.facebook.com/favicon.ico" alt="Facebook" />
+      <span>Facebook</span>
+    </a>
+    <a href="https://instagram.com" class="tile">
+      <img src="https://static.cdninstagram.com/rsrc.php/v4/ys/r/aM-g435MtEX.png" alt="Instagram" />
+      <span>Instagram</span>
+    </a>
+    <a href="https://m.youtube.com/" class="tile">
+      <img src="https://cdn.iconscout.com/icon/free/png-512/free-youtube-logo-icon-download-in-svg-png-gif-file-formats--social-media-pack-logos-icons-498416.png?f=webp&w=512" alt="" />
+      <span>YouTube</span>
+    </a>
+    
+    
+    <a href="https://aniwatchtv.to/recently-updated" class="tile">
+      <img src="https://aniwatchtv.to/favicon.ico" alt="aniwatchtv" />
+      <span>AniwatchTV</span>
+    </a>
+    <a href="https://flixtor.to/home" class="tile">
+      <img src="https://flixtor.to/favicon.ico" alt="Flixtor.to" />
+      <span>Flixtor.to</span>
+    </a>
+    
+    <a href="https://fzmovies.net/movieslist.php?catID=2&by=date" class="tile">
+      <img src="https://fzmovies.net/favicon.ico" alt="" />
+      <span>FZmovies</span>
+    </a>
+    
+    <a href="https://netflix.com" class="tile">
+      <img src="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico" alt="Netflix" />
+      <span>Netflix</span>
+    </a>
+     <a href="https://github.com" class="tile">
+      <img src="https://github.githubassets.com/favicons/favicon.png" alt="GitHub" />
+      <span>GitHub</span>
+    </a>
+    <a href="https://chatgpt.com/" class="tile">
+      <img src="https://chatgpt.com/favicon.ico" alt="ChatGpt" />
+      <span>ChatGpt</span>
+    </a>
+    
+    <a href="https://www.canva.com" class="tile">
+      <img src="https://www.canva.com/favicon.ico" alt="" />
+      <span>Canva</span>
+    </a>
+    
+    <a href="https://ytmp3.la" class="tile">
+      <img src="https://ytmp3.la/favicon.ico" alt="" />
+      <span>YTMp3</span>
+    </a>
+    
+    <a href="https://snaptik.app/en2" class="tile">
+      <img src="https://snaptik.app/favicon.ico" alt="" />
+      <span>Snaptik</span>
+    </a>
+   
+    <a href="https://www.imagetotext.info/" class="tile">
+      <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/text-to-image-12087095-9915799.png?f=webp&w=512" alt="" />
+      <span>ImageToText</span>
+    </a>
+    
+    <a href="https://www.remove.bg/" class="tile">
+      <img src="https://www.remove.bg/favicon.ico" alt="Removebg" />
+      <span>RemoveBG</span>
+    </a>
+    
+    <a href="https://www.iloveimg.com/" class="tile">
+      <img src="https://www.iloveimg.com/img/favicons-img/favicon-16x16.png" alt="" />
+      <span>iLoveImg</span>
+    </a>
+    
+    <a href="https://www.ilovepdf.com/" class="tile">
+      <img src="https://www.ilovepdf.com/favicon.ico" alt="" />
+      <span>iLovePdf</span>
+    </a>
+    
+    <a href="https://www.cutout.pro/" class="tile">
+      <img src="https://www.cutout.pro/favicon.ico" alt="" />
+      <span>CutOutPro</span>
+    </a>
+    
+    <a href="https://www.view-page-source.com/" class="tile">
+      <img src="https://www.view-page-source.com/favicon.ico" alt="" />
+      <span>VPSource</span>
+    </a>
+    
+    <a href="https://temp-mail.org/en/" class="tile">
+      <img src="https://temp-mail.org/favicon.ico" alt="" />
+      <span>Temp-Mail</span>
+    </a>
+    
+    <a href="https://iconscout.com/" class="tile">
+      <img src="https://iconscout.com/favicon.ico" alt="" />
+      <span>IconScout</span>
+    </a>
+    
+    <a href="https://sketch2app.io" class="tile">
+      <img src="https://sketch2app.io/favicon.ico" alt="" />
+      <span>Sketch2App</span>
+    </a>
+    
+  </div>
+</body>
+</html>
