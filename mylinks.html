@@ -11,7 +11,7 @@
     body {
       margin: 0;
       font-family: sans-serif;
-      background-color: #f1f1f1;
+      background-color: #d3d4de;
     }
  .navbar {
       background-color: #333;
@@ -42,7 +42,10 @@
     }
 
     .menu-bar a:hover {
-      background-color: #555;
+      background-color: ;
+      border-radius: 12px;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.6);  
     }
 
     .dropdown-content {
@@ -52,6 +55,7 @@
       min-width: 160px;
       z-index: 1;
       top: 46px;
+      border-radius: 12px;
     }
 
     .dropdown-content a {
@@ -78,9 +82,11 @@
     }
 
     .tile {
-      background-color: white;
+      background-color: #d3d4de;
       border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2),
+-8px -8px 20px rgba(255, 255, 255, 0.6);
       text-align: center;
       text-decoration: none;
       padding: 0.5rem;
@@ -89,6 +95,8 @@
 
     .tile:hover {
       transform: scale(1.05);
+      box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2),
+    inset -8px -8px 10px rgba(255, 255, 255, 0.6);
     }
 
     .tile img {
@@ -103,6 +111,8 @@
       font-size: 0.6rem;
       color: #333;
     }
+    
+/* footer link*/
    .foot {
       display: block;
       font-size: 0.8rem;
@@ -116,34 +126,40 @@
       max-width: 300px;
       margin-bottom: 30px;
     }
-
+   
+/* search box */
     input[type="text"] {
       width: 60%;
       max-width: 500px;
       padding: 12px 20px;
+      background-color: #f1f1f1;
       font-size: 16px;
       border: 1px solid #dcdcdc;
       border-radius: 24px;
       outline: none;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2),
+-8px -8px 20px rgba(255, 255, 255, 0.6);
     }
-
+ 
     input[type="submit"] {
       margin-top: 20px;
       padding: 10px 20px;
       font-size: 16px;
-      background-color: #f8f9fa;
-      border: 1px solid #dcdcdc;
+      background-color: #d3d4de;
       border-radius: 24px;
       cursor: pointer;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2),
+-8px -8px 20px rgba(255, 255, 255, 0.6);
     }
 
     input[type="submit"]:hover {
-      background-color: #fff;
+      background-color: #d3d4de;
       transform: scale(1.05);
-    }
-
+      box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2),
+    inset -8px -8px 10px rgba(255, 255, 255, 0.6);
+  }
   </style>
   <script>
     function checkPassword(event) {
@@ -156,6 +172,7 @@
       }
     }
   </script>
+  
 </head>
 <body>
   <div class="menu-bar">
@@ -193,6 +210,7 @@
       <a href="#">About</a>
     </div>
   </div>
+       
   <br>
   <center>
   <form action="https://www.google.com/search" method="GET">
