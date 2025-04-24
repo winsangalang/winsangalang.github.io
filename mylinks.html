@@ -11,16 +11,23 @@
     body {
       margin: 0;
       font-family: sans-serif;
-      background-color: #d3d4de;
+      background-color: #f1f1f1;
     }
-  .menu-bar {
-      background-color: #d3d4de;
+ .navbar {
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .menu-bar {
+      background-color: #333;
       display: flex;
       flex-wrap: wrap;
       justify-content: left;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2),
--8px -8px 20px rgba(255, 255, 255, 0.6);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     .menu-bar .dropdown {
@@ -28,29 +35,23 @@ box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2),
     }
 
     .menu-bar a {
-      color: #333;
+      color: white;
       padding: 14px 12px;
       text-decoration: none;
       display: block;
     }
 
     .menu-bar a:hover {
-      background-color: ;
-      color: #6e6e6e;
-      border-radius: 12px;
-    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2),
-    inset -2px -2px 5px rgba(255, 255, 255, 0.6);  
+      background-color: #555;
     }
 
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: #d3d4de;
+      background-color: #333;
       min-width: 160px;
       z-index: 1;
       top: 46px;
-      border-radius: 12px;
-      border: 2px solid rgba(255, 255, 255, 0.2);
     }
 
     .dropdown-content a {
@@ -77,11 +78,9 @@ box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2),
     }
 
     .tile {
-      background-color: #d3d4de;
+      background-color: white;
       border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2),
--8px -8px 20px rgba(255, 255, 255, 0.6);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       text-align: center;
       text-decoration: none;
       padding: 0.5rem;
@@ -90,8 +89,6 @@ box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2),
 
     .tile:hover {
       transform: scale(1.05);
-      box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2),
-    inset -8px -8px 10px rgba(255, 255, 255, 0.6);
     }
 
     .tile img {
@@ -106,8 +103,6 @@ box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2),
       font-size: 0.6rem;
       color: #333;
     }
-    
-/* footer link*/
    .foot {
       display: block;
       font-size: 0.8rem;
@@ -121,41 +116,34 @@ box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2),
       max-width: 300px;
       margin-bottom: 30px;
     }
-   
-/* search box */
+
     input[type="text"] {
       width: 60%;
       max-width: 500px;
       padding: 12px 20px;
-      background-color: #f1f1f1;
       font-size: 16px;
-      border: 2px solid #dcdcdc;
+      border: 1px solid #dcdcdc;
       border-radius: 24px;
       outline: none;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2),
--8px -8px 20px rgba(255, 255, 255, 0.6);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
- 
+
     input[type="submit"] {
       margin-top: 20px;
       padding: 10px 20px;
       font-size: 16px;
-      background-color: #d3d4de;
+      background-color: #f8f9fa;
+      border: 1px solid #dcdcdc;
       border-radius: 24px;
       cursor: pointer;
-      border: 2px solid rgba(255, 255, 255, 0.2);
-box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2),
--8px -8px 20px rgba(255, 255, 255, 0.6);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     input[type="submit"]:hover {
-      color: #6e6e6e;
-      background-color: #d3d4de;
+      background-color: #fff;
       transform: scale(1.05);
-      box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2),
-    inset -8px -8px 10px rgba(255, 255, 255, 0.6);
-  }
+    }
+
   </style>
   <script>
     function checkPassword(event) {
@@ -168,7 +156,6 @@ box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2),
       }
     }
   </script>
-  
 </head>
 <body>
   <div class="menu-bar">
@@ -198,15 +185,12 @@ box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2),
            
             <a href="https://gzone.ph/#login" target="_blank">GameZone</a>
             
-            <a href="http://swerte77.swerte77v4.cc/?referralCode=khr8499" target="_blank">Swerte77</a>
-            
       </div>
     </div>
     <div class="dropdown">
       <a href="#">About</a>
     </div>
   </div>
-       
   <br>
   <center>
   <form action="https://www.google.com/search" method="GET">
@@ -443,16 +427,6 @@ box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2),
       <span>CSSGridGen</span>
     </a>
 
-    <a href="https://alvarotrigo.com/shadow-gradients/" class="tile" target="_blank">
-      <img src="https://alvarotrigo.com/favicon.ico" alt="" />
-      <span>CSS-Shadow</span>
-    </a>
-     
-    <a href="https://darkcssweb.com/" class="tile" target="_blank">
-      <img src="https://darkcssweb.com/wp-content/uploads/2024/08/logo-1-150x150.png" alt="" />
-      <span>DarkCSSweb</span>
-    </a>
-     
     <a href="https://filecr.com/en/" class="tile" target="_blank">
       <img src="https://filecr.com/favicon.png" alt="" />
       <span>FileCR</span>
@@ -481,6 +455,11 @@ box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2),
      <a href="https://www.hirensbootcd.org/" class="tile" target="_blank">
       <img src="https://www.hirensbootcd.org/favicon.ico" alt="" />
       <span>HirensBootCD</span>
+    </a>
+     
+   <a href="https://tsm-tool.com/" class="tile" target="_blank">
+      <img src="https://tsm-tool.com/favicon.ico" alt="" />
+      <span>TSM-Tools</span>
     </a>
      
    <a href="https://fast.com/" class="tile" target="_blank">
