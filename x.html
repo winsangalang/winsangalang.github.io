@@ -581,4 +581,110 @@ const performersTop = ["janelicious","mary_lepson","mariinet","angelina_key","mo
   const performers18 = ["rinariim","dariana_palmer","islanomi","ameliia_castro","dani_skinny_","girlsfornight","loney__tunes","sana_minatozaki","cr1stina","emilia_cowell","ariiaross","junorossell_uwu","ninaa_sky","uwuxo","wladilia","neyaniam","yours_megan","charming_sofi","emma_flin","meyong_mg","miwa_kasumi", "milla_remmy", "charming_melody", "nancy_ston","cute__alicia", "sexxybunny9", "anniebrie", "mia_nevaeh", "avilyn", "lindsay_khaleesi", "miranda_doll_", "vanessa_florence","mily_san","joanagrace", "marianthonia", "star_giirl","stargiirl_", "charlotte_capell", "ambermoss_", "emilywithe_", "grey_june", "mira_one_", "haanna_thompson", "zarascarlett", "meganlovve", "kandy_curly", "zoe_sky_", "gabriela_duarte", "avalon_badger", "lissiii", "miss_shine_", "puma4ka", "ailann_", "_megan_honey", "b4by_lol1", "michelleonewhite", "lilithcary", "adara_luna", "sweety_vikky","irma_edlard", "lilyvibe", "rossi_purple", "petitbelle", "rumiliya", "annybuny", "charming_berry_", "emilyreeed", "rileyroxx", "_aloeva", "irma_bell", "pixie_pie", "petiteluluxxo", "sineshinegirls", "juliavangg_19", "ximena_lopez_", "thqfallenangel", "goldbutterfly_", "sophia_pond_", "polly_pocket22", "ledi_jess", "fannytaft", "blushed_pussy", "missima", "limin_hee", "hellenparis1", "lisaandtessa", "afinaafradita19", "secretgirlfriendxo", "sweet_littleee", "dariame", "williamandmia", "khottie3",
 "kathedixol", "ammangel",
 "elu_foxxx", "julietastong",
-"akira_mori", "elayliv", "adelina_cowel
+"akira_mori", "elayliv", "adelina_cowell", "sleepycode002",
+"urlittlegirl_", "illirika6a",
+"bellaquincy", "curtischloe",
+"marie_powel_", "rocksbabies",
+"laura_shtein", "alizeth_", "dailywet4cb", "rosalyn_flores", "alexa_millers_", "litle_lola",
+"emilyincb", "kimberly_leon_", "irisbroyn","son_pak","kokomi_sangonomia","say_non"];
+  const container18 = document.getElementById('links18');
+
+  performers18.forEach(name => {
+    const a = document.createElement('a');
+    a.href = `https://recu.me/performer/${name}/latest`;
+    a.target = "_blank";
+    a.textContent = name;
+    container18.appendChild(a);
+    container18.appendChild(document.createTextNode(' '));
+  });
+
+  const performersHot = ["sugar_blast","mirai_meow","helenmiaalice","mia_rom","sweetpussyhot_","liass_molly","pina_coladas","kimlennox","niaholland","alaiarogers","megan_kuromi","karli_hott","merrilyn","sana_minatozaki","kimflow","new_dee","redjina_angel", "bunnybonn1e", "victoria__rossi", "alizdurand", "hannadowling_gh", "tiffanyrusso", "amilia4u", "belka_mishka1", "seon_mi", "ania_sweet", "jap_amelle", "tinki_winkii", "sweet_69billy", "lailatoks", "suzzy_sweet18", "my_eyes_higher", "megan_ros_", "chelsypickman", "me__ow", "vf_", "silvana_perver", "cupcakepancake", "sophiaflorence", "mizushimiyata", "fransheska_stone", "shy_mooon", "white_katana", "_jessicajones", "miss_scarleet", "alison_miller9", "vina_skybabe", "mirandashaw", "secretbee", "la_lisa_6", "tailink4", "mikota_", "silvia_fox", "_mary_chili", "hanna_weist1", "emastonex", "angella_kleee", "lizziewood", "alexanotitle", "seenteya", "amberliiz", "monique_a", "_ivis", "mynameisnikki", "kaylaa_fox", "laura_hills18", "victorialeia", "_miss_kimm", "honeyautumn", "timon1201", "zoe_blake18", "maggie_richardson1", "lola_and_girls", "cielo69_", "leahsthetics", "madeline_jackson", "minarocket_", "amaterasu_3", "isabellricci", "cherylbutler", "chloewildd", "xxxhoneyxx", "maybelltailor", "valerie07", "madison_fox1", "shy_dy", "welcomb", "misschelseaa", "hee_jeen", "valeriah_", "nelly_icee", "_karla_sky", "frauchocolate", "1i1ypa1mer", "yourlovelyjulia", "cutemia6", "eve_wilde", "squikt","girlswannasex", "megan_esposito", "girl_next_door___", "hottie_bird", "as1an_girlfriend", "emerald_bell", "margolori", "juliefrances", "aliencutie", "arii_x","mabel_n_mike","candysfox"];
+  const containerHot = document.getElementById('linksHot');
+
+  performersHot.forEach(name => {
+    const a = document.createElement('a');
+    a.href = `https://recu.me/performer/${name}/latest`;
+    a.target = "_blank";
+    a.textContent = name;
+    containerHot.appendChild(a);
+    containerHot.appendChild(document.createTextNode(' '));
+  });</script>
+
+    <div id="" class="temp"> 
+    <h2>Quick list</h2>
+       
+    <div id="profileLinks" class="profileLinks"></div></p><br><br><br>
+
+    <script>
+        document.getElementById('profileForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const link = document.getElementById('link').value;
+
+            if (name && link) {
+                const profile = { name, link };
+                let profiles = JSON.parse(localStorage.getItem('profiles')) || [];
+                profiles.push(profile);
+                localStorage.setItem('profiles', JSON.stringify(profiles));
+                displayProfiles();
+                document.getElementById('profileForm').reset();
+            }
+        });
+
+        function displayProfiles() {
+            const profileLinksDiv = document.getElementById('profileLinks');
+            profileLinksDiv.innerHTML = '';
+            const profiles = JSON.parse(localStorage.getItem('profiles')) || [];
+            profiles.forEach((profile, index) => {
+                const profileLinkDiv = document.createElement('div');
+                profileLinkDiv.className = 'profile-link';
+                profileLinkDiv.innerHTML = `
+                    <a href="${profile.link}${profile.name}/latest" target="_blank">${profile.name}</a>
+                    <input type="hidden" onclick="editProfile(${index})" class="edt"></input>
+                    <button onclick="deleteProfile(${index})" class="edt">❌</button>
+                    <form id="editForm${index}" class="edit-form">
+                        <input type="text" id="editName${index}" value="${profile.name}" class="box2" autocomplete="off" required>
+                        <input type="" id="editLink${index}" value="${profile.link}${profile.name}/latest" autocomplete="off" class="box2" required>
+                        <button type="submit"  class="sav" >💾</button>
+                    </form>
+                `;
+                profileLinksDiv.appendChild(profileLinkDiv);
+
+                document.getElementById(`editForm${index}`).addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    updateProfile(index);
+                });
+            });
+        }
+
+        function editProfile(index) {
+            const editForm = document.getElementById(`editForm${index}`);
+            editForm.style.display = 'block';
+        }
+
+        function updateProfile(index) {
+            const profiles = JSON.parse(localStorage.getItem('profiles')) || [];
+            const name = document.getElementById(`editName${index}`).value;
+            const link = document.getElementById(`editLink${index}`).value;
+
+            profiles[index] = { name, link };
+            localStorage.setItem('profiles', JSON.stringify(profiles));
+            displayProfiles();
+        }
+
+        function deleteProfile(index) {
+            let profiles = JSON.parse(localStorage.getItem('profiles')) || [];
+            profiles.splice(index, 1);
+            localStorage.setItem('profiles', JSON.stringify(profiles));
+            displayProfiles();
+        }
+
+        window.onload = function() {
+            displayProfiles();
+        };
+    </script></div>
+    <p><br>
+ <div class="foot">• 2025 •</div>
+ </p>
+</body>
+</html>
