@@ -128,13 +128,13 @@
   }
 </style>
 </head>
-<body>
+<body onload="filterProducts('gadgets')">
 
 <!-- Navigation bar -->
 <div class="navbar">
   <a href="#" onclick="filterProducts('all')">Home</a>
   <button onclick="openPanel()">Categories</button>
-  <a href="#">Contact</a>
+  <a href="https://www.tiktok.com/@win11387?_t=ZS-8yo5CAVr6tF&_r=1">Contact</a>
 </div>
 
 <!-- Side panel -->
@@ -160,7 +160,7 @@
   <a href="#" onclick="filterProducts('household'); closePanel()">Household Essentials</a>
 
   <!-- Kids & Babies -->
-  <a href="#" onclick="filterProducts('forkids'); closePanel()">Kids & Baby Products</a>
+  <a href="#" onclick="filterProducts('kids'); closePanel()">Kids & Baby Products</a>
 
   <!-- Others -->
   <a href="#" onclick="filterProducts('sports'); closePanel()">Sports & Outdoors</a>
@@ -173,6 +173,19 @@
 <h1 id="page-title">My Finds</h1>
 <div class="product-grid">
 
+  <!-- Gadgets -->
+<div class="product" data-category="gadgets">
+    <img src="https://down-ph.img.susercontent.com/file/ph-11134207-7rasm-m9dy43gb0y7nd9@resize_w1200_nl.webp" alt="">
+    <div class="product-info">
+      <h3>R36S Game Console</h3>
+      <div class="icon-links">
+        <a href="https://vt.tiktok.com/ZSSW7Se1y/" target="_blank"><img src="https://www.tiktok.com/favicon.ico" alt="TikTok"></a>
+        <a href="https://ph.shp.ee/w0bqr1u?smtt=0.0.9" target="_blank"><img src="https://shopee.ph/favicon.ico" alt="Shopee"></a>
+        <a href="https://s.lazada.com.ph/s.GSO0h?cc" target="_blank"><img src="https://www.lazada.com.ph/favicon.ico" alt="Lazada"></a>
+      </div>
+    </div>
+  </div>
+  
   <!-- Electronics -->
   <div class="product" data-category="electronics">
     <img src="https://down-ph.img.susercontent.com/file/ph-11134207-7rase-m8ea69k4vrmmcb@resize_w1200_nl.webp" alt="">
@@ -233,7 +246,7 @@ function filterProducts(category) {
     }
   });
 
-  title.textContent = category === 'all' ? 'My Finds' : `My Finds | ${category.charAt(0).toUpperCase() + category.slice(1)}`;
+  title.textContent = category === 'all' ? 'My Finds' : `${category.charAt(0).toUpperCase() + category.slice(1)}`;
 }
 </script>
 
