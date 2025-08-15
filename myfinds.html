@@ -123,7 +123,16 @@
   /* Mobile view */
   @media (max-width: 300px) {
     .product-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
+    }
+  }
+/* Desktop View */
+  @media (min-width: 1025px) {
+    .product-grid {
+      grid-template-columns: repeat(6, 1fr); /* 6 columns for desktop */
+    }
+    .navbar {
+      padding: 0 30px;
     }
   }
 </style>
