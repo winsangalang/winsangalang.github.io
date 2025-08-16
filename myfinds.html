@@ -120,22 +120,41 @@
   .icon-links a:hover img {
     transform: scale(1.1);
   }
+  
+/* Mobile Portrait (small phones) */
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+}
 
-  /* Mobile view */
-  @media (max-width: 300px) {
-    .product-grid {
-      grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
-    }
+/* Mobile Landscape */
+@media (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
   }
-/* Desktop View */
-  @media (min-width: 1025px) {
-    .product-grid {
-      grid-template-columns: repeat(6, 1fr); /* 6 columns for desktop */
-    }
-    .navbar {
-      padding: 0 30px;
-    }
+}
+
+/* Tablet (portrait + landscape) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
   }
+  .navbar {
+    padding: 0 20px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .product-grid {
+    grid-template-columns: repeat(6, 1fr); /* 6 columns */
+  }
+  .navbar {
+    padding: 0 30px;
+  }
+}
+
 </style>
 </head>
 <body onload="filterProducts('all')">
