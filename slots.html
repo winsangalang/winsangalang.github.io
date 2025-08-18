@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/x-icon" href="https://winsangalang.github.io/favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>Slots</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #d3d4de;
+    }
+
+    .menu-bar {
+      background-color: #f2f2f2;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: left;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+ box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2),
+ -8px -8px 20px rgba(255, 255, 255, 0.6);
+    }
+
+    .menu-bar .dropdown {
+      position: relative;
+    }
+
+    .menu-bar a {
+      color: #333;
+      padding: 14px 12px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .menu-bar a:hover {
+      background-color: ;
+       color: #6e6e6e;
+       border-radius: 12px;
+     box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2),
+     inset -2px -2px 5px rgba(255, 255, 255, 0.6);  
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f2f2f2;
+      min-width: 160px;
+      z-index: 1;
+      top: 46px;
+      border-radius: 12px;
+       border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .dropdown-content a {
+      padding: 12px 16px;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    header {
+      background-color: #333;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    .speed-dial {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .tile {
+      background-color: #f2f2f2;
+      border-radius: 12px;
+      text-align: center;
+      text-decoration: none;
+      padding: 0.5rem;
+      transition: transform 0.2s;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+ box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2),
+ -8px -8px 20px rgba(255, 255, 255, 0.6);
+    }
+
+    .tile:hover {
+      transform: scale(1.05);
+      box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2),
+     inset -8px -8px 10px rgba(255, 255, 255, 0.6);
+    }
+
+    .tile img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 0.1rem;
+      border-radius: 10px;
+    }
+
+    .tile span {
+      display: block;
+      font-size: 0.6rem;
+      color: #333;
+    }
+   .foot {
+      display: block;
+      font-size: 0.8rem;
+      color: #333;
+      text-decoration: none;
+      text-align: center;
+    }
+    
+    img {
+      width: 60%;
+      max-width: 300px;
+      margin-bottom: 30px;
+    }
+
+    input[type="text"] {
+      width: 60%;
+      max-width: 500px;
+      padding: 12px 20px;
+      font-size: 16px;
+      background-color: #f1f1f1;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+ box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2),
+ -8px -8px 20px rgba(255, 255, 255, 0.6);
+      border-radius: 24px;
+      outline: none;
+      
+      
+    }
+
+    input[type="submit"] {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #f2f2f2;
+      border: 1px solid #dcdcdc;
+      border-radius: 24px;
+      cursor: pointer;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+ box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2),
+ -8px -8px 20px rgba(255, 255, 255, 0.6);
+    }
+
+    input[type="submit"]:hover {
+      color: #6e6e6e;
+      background-color: ;
+      transform: scale(1.05);
+      box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2),
+     inset -8px -8px 10px rgba(255, 255, 255, 0.6);
+   }
+    }
+
+  </style>
+  <script>
+    function checkPassword(event) {
+      event.preventDefault(); // prevent default link behavior
+      const password = prompt("Enter password:");
+      if (password === ".") {
+        window.location.href = event.currentTarget.href;
+      } else {
+        alert("Incorrect password!");
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="menu-bar">
+    <div class="dropdown">
+      <a href="#" >Menu</a>
+      <div class="dropdown-content">
+        <a href="https://winsangalang.github.io/mylinks.html">MyLinks</a>
+        <a href="https://winsangalang.github.io/myfinds.html">MyFinds</a>
+        <a href="https://winsangalang.github.io/fsbot.html">FSBot</a>
+        <a href="https://winsangalang.github.io/files.html" target="_blank" onclick="checkPassword(event)">Files</a>
+        <a href="https://winsangalang.github.io/x.html" target="_blank" onclick="checkPassword(event)">About</a>
+        
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">More</a>
+      <div class="dropdown-content">
+       <a href="https://helpslot.win/helpSlot" target="_blank">HelpSlot</a>
+       
+      </div>
+    </div>
+</div>
+  <br>
+  <center>
+  <form action="https://www.google.com/search" method="GET">
+    <input type="text" name="q" placeholder="Google Search">
+    <input type="submit" value="GO">
+  </form>
+  </center>
+  <br>
+  <div class="speed-dial">
+    <a href="https://nustargame.com/" class="tile" target="_blank">
+      <img src="https://nustargame.com/favicon.ico" alt="" />
+      <span>Nustar</span>
+    </a>
+    
+    <a href="https://www.playtime.ph/" class="tile" target="_blank">
+      <img src="https://www.playtime.ph/favicon.ico" alt="" />
+      <span>Playtime</span>
+    </a>  
+     
+    <a href="https://arionplay.com/" class="tile" target="_blank">
+      <img src="https://arionplay.com/favicon.ico" alt="" />
+      <span>Arionplay</span>
+    </a>
+     
+     <a href="https://ok-web.okbet.com/m/" class="tile" target="_blank">
+      <img src="https://ok-web.okbet.com/favicon.ico" alt="" />
+      <span>Okbet</span>
+    </a>
+    
+    <a href="https://www.casinoplus.com.ph/" class="tile" target="_blank">
+      <img src="https://www.casinoplus.com.ph/favicon.ico" alt="" />
+      <span>Casinoplus</span>
+    </a>
+     
+    <a href="https://arenaplus.ph/" class="tile" target="_blank">
+      <img src="https://arenaplus.ph/favicon.ico" alt="" />
+      <span>Arenaplus</span>
+    </a>
+     
+    <a href="https://bingoplus.com/" class="tile" target="_blank">
+      <img src="https://bingoplus.com/favicon.ico" alt="" />
+      <span>Bingoplus</span>
+    </a>
+    
+    <a href="https://www.king.ph/" class="tile" target="_blank">
+      <img src="https://www.king.ph/favicon.ico" alt="" />
+      <span>Kingph</span>
+    </a>
+    
+    <a href="https://www.filbet.com/" class="tile" target="_blank">
+      <img src="https://www.filbet.com/favicon.ico" alt="" />
+      <span>Filbet</span>
+    </a>
+     
+    <a href="https://www.bigbunny.ph" class="tile" target="_blank">
+      <img src="https://www.bigbunny.phfavicon.ico" alt="" />
+      <span>Bigbunny</span>
+    </a>
+        
+    <a href="https://www.swerte77vip1.cc/m/home?affiliateCode=swerte77&referralCode=aov5143" class="tile" target="_blank">
+      <img src="https://www.swerte77vip1.cc/favicon.ico" alt="" />
+      <span>Swerte77</span>
+    </a> 
+    
+    <a href="http://win999.73phcash.club/?referralCode=cbs8717" class="tile" target="_blank">
+      <img src="http://win999.73phcash.club/favicon.ico" alt="" />
+      <span>Phcash</span>
+    </a>
+    
+    <a href="http://www.gbet777.win/?r=xrp5508" class="tile" target="_blank">
+      <img src="http://www.gbet777.win/favicon.ico" alt="" />
+      <span>Gbet777</span>
+    </a>
+ </div>
+  <a href="https://winsangalang.github.io" class="foot" target="_blank">winsangalang.github.io
+    </a>
+    <br>
+</body>
+</html>
