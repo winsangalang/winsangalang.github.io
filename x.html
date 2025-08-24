@@ -601,7 +601,7 @@ document.getElementById('chatLink').href = chatLink;
             const profileLinkDiv = document.createElement('div');
             profileLinkDiv.className = 'profile-link';
             profileLinkDiv.innerHTML = `
-                <a href="${profile.link}${profile.name}/latest" target="_blank">🔹${profile.name}</a>
+                🔹<a href="${profile.link}${profile.name}/latest" target="_blank">${profile.name}</a>
                 <input type="hidden" onclick="editProfile(${index})" class="edt"></input>
                 <input type="hidden" onclick="deleteProfile(${index})" class="edt"></button>
                 <form id="editForm${index}" class="edit-form">
