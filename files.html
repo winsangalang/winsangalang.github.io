@@ -6,34 +6,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MyFiles</title>
   <style>
-    /* Base styling */
+    /* ====== Base Theme ====== */
+    :root {
+      --primary: #3285d0;
+      --primary-hover: #1e5fa0;
+      --bg: #0f2027;
+      --bg-alt: #1c2c34;
+      --text: #f5f5f5;
+      --text-muted: #cbd5e0;
+      --card-bg: #1e2f38;
+    }
+
     body {
       font-family: "Roboto", Arial, sans-serif;
       margin: 0;
-      background: #f0f2f5;
-      color: #333;
+      background: linear-gradient(135deg, var(--bg), var(--bg-alt));
+      color: var(--text);
+      min-height: 100vh;
     }
 
-    /* Navbar */
+    /* ====== Navbar ====== */
     .navbar {
-      background: #222;
+      background: rgba(20, 30, 40, 0.95);
+      backdrop-filter: blur(6px);
       padding: 12px 20px;
       display: flex;
       align-items: center;
-      gap: 15px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      gap: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
     }
     .navbar a {
-      color: white;
+      color: var(--text);
       text-decoration: none;
       font-weight: 500;
       transition: 0.3s;
     }
     .navbar a:hover {
-      color: #3285d0;
+      color: var(--primary);
     }
-
-    /* Dropdown */
     .dropdown {
       position: relative;
     }
@@ -46,46 +59,65 @@
       position: absolute;
       top: 100%;
       left: 0;
-      background: #fff;
-      min-width: 180px;
+      background: var(--card-bg);
       border-radius: 8px;
-      box-shadow: 0px 6px 12px rgba(0,0,0,0.15);
       overflow: hidden;
-      z-index: 99;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.5);
     }
     .dropdown-content a {
-      color: #333;
+      color: var(--text);
       padding: 10px 15px;
       display: block;
-      text-decoration: none;
       transition: 0.2s;
     }
     .dropdown-content a:hover {
-      background: #f4f4f4;
-      color: #3285d0;
+      background: var(--primary-hover);
+      color: #fff;
     }
     .dropdown:hover .dropdown-content {
       display: block;
     }
 
-    /* Container */
+    /* ====== Container ====== */
     .container {
       max-width: 800px;
       margin: 40px auto;
-      background: white;
+      background: var(--card-bg);
       padding: 25px 30px;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     }
+    .container h1, 
     .container h2 {
       margin-bottom: 15px;
-      font-size: 1.6rem;
-      color: #222;
-      border-bottom: 2px solid #eee;
+      font-weight: 600;
+      color: var(--text);
+      border-bottom: 2px solid rgba(255,255,255,0.1);
       padding-bottom: 8px;
     }
 
-    /* File list */
+    /* ====== Download Button ====== */
+    .download-btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: var(--primary);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .download-btn:hover {
+      background: var(--primary-hover);
+    }
+    .note {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* ====== File List ====== */
     ul.file-list {
       list-style: none;
       padding: 0;
@@ -94,25 +126,38 @@
     ul.file-list li {
       padding: 10px 12px;
       margin: 6px 0;
-      background: #f9f9f9;
+      background: rgba(255,255,255,0.05);
       border-radius: 8px;
       transition: 0.3s;
     }
     ul.file-list li:hover {
-      background: #e9f2fb;
+      background: rgba(50,133,208,0.2);
     }
     ul.file-list a {
-      color: #3285d0;
+      color: var(--primary);
       font-weight: 500;
       text-decoration: none;
     }
     ul.file-list a:hover {
       text-decoration: underline;
     }
+
+    /* ====== Hotkeys Section ====== */
+    .hotkeys {
+      margin-top: 1.5rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+    .hotkeys span {
+      display: block;
+      font-weight: bold;
+      color: var(--text);
+    }
   </style>
 </head>
 <body>
-  <!-- Navbar -->
+  <!-- Example Navbar -->
   <div class="navbar">
     <a href="https://winsangalang.github.io">Home</a>
     <a href="https://winsangalang.github.io">About</a>
@@ -120,28 +165,30 @@
       <a href="#">Services</a>
       <div class="dropdown-content">
         <a href="https://github.com/dashboard" target="_blank">Github</a>
-       
+        
         <a href="https://chatgpt.com/" target="_blank">ChatGPT</a>
       </div>
     </div>
     <a href="https://winsangalang.github.io" target="_blank">Contact</a>
   </div>
 
-  <!-- Container -->
+  
+
+  <!-- Another Page Example (File List) -->
   <div class="container">
     <h2>Contents</h2>
     <ul class="file-list">
-      <li><a href="https://winsangalang.github.io/windows/fsbot.zip" target="_blank">Cabal_FS-Bot.zip</a></li>
-      <li><a href="https://winsangalang.github.io/windows/deepfreeze_8.53.zip" target="_blank">DeepFreeze 8.53.zip</a></li>
-      <li><a href="https://winsangalang.github.io/windows/sdio_1.15.zip" target="_blank">Driver Installer SDIO v1.15.zip</a></li>
-      <li><a href="https://winsangalang.github.io/windows/msoffice_activator.zip" target="_blank">MS Office Activator Script.zip</a></li>
-      <li><a href="https://winsangalang.github.io/windows/ventoy_1.0.52.zip" target="_blank">Ventoy_1.0.52.zip</a></li>
-      <li><a href="https://winsangalang.github.io/windows/christitus_debloatware_tool.txt" target="_blank">ChrisTitus Debloatware Tool.txt</a></li>
-      <li><a href="https://winsangalang.github.io/windows/debloatware.zip" target="_blank">Debloatware.zip</a></li>
-      <li><a href="https://winsangalang.github.io/windows/pcgames+utorrent.zip" target="_blank">PC Games + uTorrent.zip</a></li>
-      <li><a href="https://winsangalang.github.io/windows/timefreeze.zip" target="_blank">TimeFreeze.zip</a></li>
-      <li><a href="https://winsangalang.github.io/windows/activation_script_1.8.zip" target="_blank">Windows Activation_script_1.8.zip</a></li>
-      <li><a href="https://winsangalang.github.io/windows/Windows_7_RemoveWAT.zip" target="_blank">Windows_7_RemoveWAT.zip</a></li>
+      <li><a href="https://winsangalang.github.io/windows/fsbot.zip">Cabal_FS-Bot.zip</a></li>
+      <li><a href="https://winsangalang.github.io/windows/deepfreeze_8.53.zip">DeepFreeze 8.53.zip</a></li>
+      <li><a href="https://winsangalang.github.io/windows/sdio_1.15.zip">Driver Installer SDIO v1.15.zip</a></li>
+      <li><a href="https://winsangalang.github.io/windows/msoffice_activator.zip">MSOffice Activator Script.zip</a></li>
+      <li><a href="https://winsangalang.github.io/windows/ventoy_1.0.52.zip">Ventoy_1.0.52.zip</a></li>
+      <li><a href="https://winsangalang.github.io/windows/christitus_debloatware_tool.txt">ChrisTitus Debloatware Tool.txt</a></li>
+      <li><a href="https://winsangalang.github.io/windows/debloatware.zip">Debloatware.zip</a></li>
+      <li><a href="https://winsangalang.github.io/windows/pcgames+utorrent.zip">PC Games+uTorrent.zip</a></li>
+      <li><a href="https://winsangalang.github.io/windows/timefreeze.zip">TimeFreeze.zip</a></li>
+      <li><a href="https://winsangalang.github.io/windows/activation_script_1.8.zip">Windows Activation_script_1.8.zip</a></li>
+      <li><a href="https://winsangalang.github.io/windows/Windows_7_RemoveWAT.zip">Windows_7_RemoveWAT.zip</a></li>
     </ul>
   </div>
 </body>
