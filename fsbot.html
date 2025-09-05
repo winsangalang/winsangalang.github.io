@@ -1,30 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/x-icon" href="https://winsangalang.github.io/favicon.ico">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: roboto, serif;
-  background-color: ;  
-}
-a {
-  color: #3285d0;
-  text-align: center;
-  padding: 0px 0px;
-  text-decoration: none;
-  font-family: roboto;
-  font-size: ;
-  }
-  </style>
   <title>FSBot</title>
+  <link rel="icon" type="image/x-icon" href="https://winsangalang.github.io/favicon.ico">
+  <style>
+    /* Reset & base styling */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Roboto", sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      max-width: 400px;
+      width: 90%;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    a.download-btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: #3285d0;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    a.download-btn:hover {
+      background: #1e5fa0;
+    }
+
+    .note {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    .hotkeys {
+      margin-top: 1.5rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .hotkeys span {
+      display: block;
+      font-weight: bold;
+      color: #fff;
+    }
+  </style>
   <script>
     window.onload = function() {
       window.location.href = 'windows/fsbot.zip';
@@ -32,12 +80,16 @@ a {
   </script>
 </head>
 <body>
-  <br><br><br><br><div><p align="center"><a href="windows/fsbot.zip">Click here! </a>if download doesn't start.
- <br></div><div>Keyboard Hotkeys:<br>
-    HOME = Start 
-    <br>
-    END = Stop
- </div>
-    </p>
+  <div class="container">
+    <h1>FSBot Download</h1>
+    <a href="windows/fsbot.zip" class="download-btn">Download Now</a>
+    <p class="note">If the download doesn't start automatically, click the button above.</p>
+
+    <div class="hotkeys">
+      <h2>Keyboard Hotkeys</h2>
+      <span>HOME → Start</span>
+      <span>END → Stop</span>
+    </div>
+  </div>
 </body>
 </html>
