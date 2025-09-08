@@ -116,6 +116,37 @@
       font-size: 0.6rem;
       color: #333;
     }
+
+    .tile-dark {
+      background-color: #f2f2f2;
+      border-radius: 12px;
+      text-align: center;
+      text-decoration: none;
+      padding: 0.5rem;
+      transition: transform 0.2s;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+ box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2),
+ -8px -8px 20px rgba(255, 255, 255, 0.6);
+    }
+
+    .tile-dark:hover {
+      transform: scale(1.05);
+      box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2),
+     inset -8px -8px 10px rgba(255, 255, 255, 0.6);
+    }
+
+    .tile-dark img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 0.1rem;
+      border-radius: 10px;
+    }
+
+    .tile-dark span {
+      display: block;
+      font-size: 0.6rem;
+      color: #333;
+    }
    .foot {
       display: block;
       font-size: 0.8rem;
@@ -314,7 +345,7 @@
       <span>Grok Ai</span>
     </a>
     
-    <a href="https://www.blackbox.ai/" class="tile" target="_blank">
+    <a href="https://www.blackbox.ai/" class="tile-dark" target="_blank">
       <img src="https://www.blackbox.ai/_next/static/media/blackbox-transparent.2d60f166.svg" alt="" />
       <span>Blackbox Ai</span>
     </a>
