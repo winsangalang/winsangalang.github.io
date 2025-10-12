@@ -1,4 +1,4 @@
-const performersTop = ["cutebrutality","alettaeve"];
+const performersTop = ["silkencrave","cutebrutality","alettaeve"];
   const containerTop = document.getElementById('linksTop');
 
   performersTop.forEach(name => {
@@ -22,7 +22,7 @@ const performersTop = ["cutebrutality","alettaeve"];
     container18.appendChild(document.createTextNode(' '));
   });
 
-  const performersHot = ["petalpage"];
+  const performersHot = ["queenelia","petalpage"];
   const containerHot = document.getElementById('linksHot');
 
   performersHot.forEach(name => {
