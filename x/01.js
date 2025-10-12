@@ -1,4 +1,4 @@
-const performersTop = ["silkencrave","cutebrutality","alettaeve"];
+const performersTop = ["silkencrave","cutebrutality","alettaeve","lily_lv","emma_clon","victoria_calloway","cutealexandre","eveluin_leeds","malvina_doll","sweetlittlevenus"];
   const containerTop = document.getElementById('linksTop');
 
   performersTop.forEach(name => {
@@ -22,7 +22,7 @@ const performersTop = ["silkencrave","cutebrutality","alettaeve"];
     container18.appendChild(document.createTextNode(' '));
   });
 
-  const performersHot = ["queenelia","petalpage"];
+  const performersHot = ["mary_lepson","anny_leps","luucy___","katemoss70","kittyloffe","kittenmoon_","alisaa_01","michelle_swan","xiawa_xo","jumphigher","laralane_","germaine_jones","queenelia","petalpage"];
   const containerHot = document.getElementById('linksHot');
 
   performersHot.forEach(name => {
