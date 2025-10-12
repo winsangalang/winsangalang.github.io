@@ -1,4 +1,4 @@
-const performersTop = ["aya_hitakayamaaa"];
+const performersTop = ["cutebrutality","alettaeve"];
   const containerTop = document.getElementById('linksTop');
 
   performersTop.forEach(name => {
@@ -10,7 +10,7 @@ const performersTop = ["aya_hitakayamaaa"];
     containerTop.appendChild(document.createTextNode(' '));
   });
 
-  const performers18 = ["power_ranger_pink","son_pak","kokomi_sangonomia","say_non"];
+  const performers18 = ["ur_sweetgirl_clarace"];
   const container18 = document.getElementById('links18');
 
   performers18.forEach(name => {
@@ -22,7 +22,7 @@ const performersTop = ["aya_hitakayamaaa"];
     container18.appendChild(document.createTextNode(' '));
   });
 
-  const performersHot = ["annbarby","candysfox"];
+  const performersHot = ["petalpage"];
   const containerHot = document.getElementById('linksHot');
 
   performersHot.forEach(name => {
