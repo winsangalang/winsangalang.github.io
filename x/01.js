@@ -1,4 +1,4 @@
-const performersTop = ["baby___lola","mrs_slimthug","silkencrave","cutebrutality","alettaeve","lily_lv","emma_clon","victoria_calloway","cutealexandre","eveluin_leeds","malvina_doll","kathe_littlee","sweetlittlevenus"];
+const performersTop = ["hosina_sayeri","baby___lola","mrs_slimthug","silkencrave","cutebrutality","alettaeve","lily_lv","emma_clon","victoria_calloway","cutealexandre","eveluin_leeds","malvina_doll","kathe_littlee","sweetlittlevenus"];
   const containerTop = document.getElementById('linksTop');
 
   performersTop.forEach(name => {
