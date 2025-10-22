@@ -1,13 +1,5 @@
 const itemList = [
     " ",
-    " ",
-    " ",
-    " ",
-    " ",
-    " ",
-    " ",
-    " ",
-    " "
 ];
 
 function renderList() {
