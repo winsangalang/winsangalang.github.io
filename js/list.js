@@ -1,5 +1,5 @@
 const itemList = [
-    " ",
+    "Nothing yet! ",
 ];
 
 function renderList() {
