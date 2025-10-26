@@ -1,4 +1,4 @@
-const performersTop = ["hosina_sayeri","baby___lola","mrs_slimthug","silkencrave","cutebrutality","alettaeve","lily_lv","emma_clon","victoria_calloway","cutealexandre","eveluin_leeds","malvina_doll","kathe_littlee","sweetlittlevenus"];
+const performersTop = ["paradi_se","ella_lee15","amy_innocent_","lux_angel","baby___lola","mrs_slimthug","silkencrave","cutebrutality","alettaeve","lily_lv","emma_clon","camilla_kelly","victoria_calloway","cutealexandre","eveluin_leeds","malvina_doll","kathe_littlee","sweetlittlevenus"];
   const containerTop = document.getElementById('linksTop');
 
   performersTop.forEach(name => {
@@ -22,7 +22,7 @@ const performersTop = ["hosina_sayeri","baby___lola","mrs_slimthug","silkencrave
     container18.appendChild(document.createTextNode(' '));
   });
 
-  const performersHot = ["jadebunnie","megan_galactica","mary_lepson","anny_leps","luucy___","katemoss70","kittyloffe","kittenmoon_","alisaa_01","michelle_swan","xiawa_xo","jumphigher","laralane_","germaine_jones","queenelia","petalpage"];
+  const performersHot = ["marlenagehlert","jadebunnie","megan_galactica","mary_lepson","anny_leps","luucy___","katemoss70","kittyloffe","kittenmoon_","alisaa_01","michelle_swan","xiawa_xo","jumphigher","laralane_","germaine_jones","queenelia","petalpage"];
   const containerHot = document.getElementById('linksHot');
 
   performersHot.forEach(name => {
