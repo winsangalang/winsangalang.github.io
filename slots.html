@@ -253,148 +253,179 @@
   </center>
   <br>
 
+  <!-- Category Filter -->
+<center>
+  <select id="categoryFilter" style="padding:8px 16px; border-radius:12px; font-size:14px; background:#f2f2f2; border:none; box-shadow: 5px 5px 10px rgba(0,0,0,0.2), -5px -5px 10px rgba(255,255,255,0.6);">
+    <option value="all">All Categories</option>
+    <option value="fav">Favourites</option>
+      <option value="other">Others</option>
+  </select>
+</center>
+
+<script>
+  const filter = document.getElementById("categoryFilter");
+
+  // Filter logic
+  filter.addEventListener("change", function() {
+    const category = this.value;
+    const tiles = document.querySelectorAll(".tile");
+
+    tiles.forEach(tile => {
+      tile.style.display = (category === "all" || tile.dataset.category === category)
+        ? "block"
+        : "none";
+    });
+  });
+
+  // 👇 Show "AI Tools" category by default
+  window.addEventListener("DOMContentLoaded", () => {
+    filter.value = "all";  // default category
+    filter.dispatchEvent(new Event("change"));
+  });
+</script>
+
   <div class="speed-dial">
-        <a href="https://winsangalang.github.io/mylinks" class="tile">
+        <a href="https://winsangalang.github.io/mylinks" class="tile" data-category="fav">
       <img src="https://winsangalang.github.io/favicon.png"/>
       <span>MyLinks</span>
         </a>
 
-<a href="https://www.casinoplus.com.ph/" class="tile" target="_blank">
+<a href="https://www.casinoplus.com.ph/" class="tile" target="_blank" data-category="fav">
       <img src="https://cp-images.casinoplus.live/images/cp/images/icon/download_app_icon.webp" alt="" />
       <span>Casinoplus</span>
     </a>
      
-    <a href="https://nustargame.com/home/login" class="tile" target="_blank">
+    <a href="https://nustargame.com/home/login" class="tile" target="_blank" data-category="fav">
       <img src="https://nustargame.com/favicon.ico" alt="" />
       <span>Nustar</span>
     </a>
 
-    <a href="https://www.playtime.ph/" class="tile" target="_blank">
+    <a href="https://www.playtime.ph/" class="tile" target="_blank" data-category="fav">
       <img src="https://static.playtime.ph/seo/logo/777.png" alt="" />
       <span>Playtime</span>
     </a>  
      
-    <a href="https://arionplay.com/" class="tile" target="_blank">
+    <a href="https://arionplay.com/" class="tile" target="_blank" data-category="fav">
       <img src="https://arionplay.com/images/pwa/icon-512-512.png" alt="" />
       <span>Arionplay</span>
     </a>
-     <a href="https://ninogaming.com" class="tile" target="_blank">
+     <a href="https://ninogaming.com" class="tile" target="_blank" data-category="fav">
       <img src="https://ninogaming.com/images/pwa/icon-512-512.png" alt="" />
       <span>Ninogaming</span>
     </a>
 
-<a href="https://www.bigbunny.ph" class="tile" target="_blank">
+<a href="https://www.bigbunny.ph" class="tile" target="_blank" data-category="fav">
       <img src="https://www.bigbunny.ph/images/logo-b.png" alt="" />
       <span>Bigbunny</span>
     </a>
     
-     <a href="https://ok-web.okbet.com?inviteCode=INVmqirid29" class="tile" target="_blank">
+     <a href="https://ok-web.okbet.com?inviteCode=INVmqirid29" class="tile" target="_blank" data-category="fav">
       <img src="https://ok-web.okbet.com/favicon.ico" alt="" />
       <span>Okbet</span>
     </a>
 
-    <a href="https://h5.okplay.ph/" class="tile" target="_blank">
+    <a href="https://h5.okplay.ph/" class="tile" target="_blank" data-category="fav">
       <img src="https://images.1323323.com/wsd-images-prod/okwinphpf5/fe_setting/desktop_app_logo/desktop_app_logo_192x192_okwinphpf5_20250408142028.png" alt="" />
       <span>Okplay</span>
     </a>
     
-    <a href="https://arenaplus.ph/" class="tile" target="_blank">
+    <a href="https://arenaplus.ph/" class="tile" target="_blank" data-category="fav">
       <img src="https://arenaplus.ph/favicon.ico" alt="" />
       <span>Arenaplus</span>
     </a>
      
-    <a href="https://bingoplus.com/?palcode=1064169239347179521inviteType&pid=SocialReferral&traceId=4f0d90cff919f71042b315b9c469f1c20730&shareType=COPYLINK" class="tile" target="_blank">
+    <a href="https://bingoplus.com/?palcode=1064169239347179521inviteType&pid=SocialReferral&traceId=4f0d90cff919f71042b315b9c469f1c20730&shareType=COPYLINK" class="tile" target="_blank" data-category="fav">
       <img src="https://bingoplus.com/img/icons/favicon-32x32.png" alt="" />
       <span>Bingoplus</span>
     </a>
     
-    <a href="https://gzone.ph/" class="tile" target="_blank">
+    <a href="https://gzone.ph/" class="tile" target="_blank" data-category="fav">
       <img src="https://gzone.ph/favicon.ico" alt="" />
       <span>Gamezone</span>
     </a>
 
-    <a href="https://www.sportsplus.ph" class="tile-dark" target="_blank">
+    <a href="https://www.sportsplus.ph" class="tile-dark" target="_blank" data-category="fav">
       <img src="https://www.sportsplus.ph/brand/img/logo.39012411a.svg" alt="" />
       <span>Sportsplus</span>
     </a>
     
 
-<a href="https://www.spinplusph.com/" class="tile" target="_blank">
+<a href="https://www.spinplusph.com/" class="tile" target="_blank" data-category="other">
       <img src="https://pub.imgscache.com/compic/4097e9c4-91dc-43ab-8d1a-f875f682ddb2.png" />
       <span>Spinplus</span>
     </a>      
 
-<a href="https://bee.ph/" class="tile" target="_blank">
+<a href="https://bee.ph/" class="tile" target="_blank" data-category="other">
       <img src="https://bee-upload.imgix.net/1761910268_69049dfc950de.png?auto=format%2Ccompress" alt="" />
       <span>Beeph</span>
     </a>      
 
-    <a href="https://www.king.ph?invite_code=r4353615" class="tile" target="_blank">
+    <a href="https://www.king.ph?invite_code=r4353615" class="tile" target="_blank" data-category="fav">
       <img src="https://king-upload.imgix.net/1761903924_6904853481447.png?auto=format%2Ccompress" alt="" />
       <span>Kingph</span>
     </a>
 
-<a href="https://www.legendlink.com/" class="tile" target="_blank">
+<a href="https://www.legendlink.com/" class="tile" target="_blank" data-category="other">
       <img src="https://www.legendlink.com/webx/favicon_ll.ico" alt="" />
       <span>LegendLink</span>
     </a>
 
-<a href="https://lucky.ph?invite_code=i1844204" class="tile-dark" target="_blank">
+<a href="https://lucky.ph?invite_code=i1844204" class="tile-dark" target="_blank" data-category="other">
       <img src="https://lucky.ph/images/site_logo.png" alt="" />
       <span>Luckyph</span>
     </a>
 
-<a href="http://www.luckymax.ph/?r=xje3300" class="tile-dark" target="_blank">
+<a href="http://www.luckymax.ph/?r=xje3300" class="tile-dark" target="_blank" data-category="other">
       <img src="https://images.6440949940.com/wsd-images-prod/maxtlbf7/merchant_resource/appdownloadicon/app_download_icon_maxtlbf7_20250908180208.png" alt="" />
       <span>Luckymax</span>
     </a>
 
-<a href="https://happybingo.ph?ref=B8E7C5" class="tile" target="_blank">
+<a href="https://happybingo.ph?ref=B8E7C5" class="tile" target="_blank" data-category="other">
       <img src="https://happybingo.ph/_app/immutable/assets/happybingo-bingo.gpyPnOFA.avif" alt="" />
       <span>Happybingo</span>
     </a>
 
-<a href="https://crazywin.ph?ref=F17296A03C" class="tile" target="_blank">
+<a href="https://crazywin.ph?ref=F17296A03C" class="tile" target="_blank" data-category="other">
       <img src="https://crazywin.ph/images/crazywin-icon-mobile-2.webp" alt="" />
       <span>Crazywinph</span>
     </a>
 
-    <a href="https://juan365.ph/a/YXhldXc=" class="tile" target="_blank">
+    <a href="https://juan365.ph/a/YXhldXc=" class="tile" target="_blank" data-category="other">
       <img src="https://juan365.com/png/download-logo.CWa_X5pB.png" alt="" />
       <span>Juan365</span>
     </a>
 
-    <a href="https://m.bigwin29.com/" class="tile" target="_blank">
+    <a href="https://m.bigwin29.com/" class="tile" target="_blank" data-category="other">
       <img src="https://m.bigwin29.com/bw29/pwa-192x192_1.png" alt="" />
       <span>Bigwin29</span>
     </a>
        
-    <a href="https://bgw69.live/" class="tile" target="_blank">
+    <a href="https://bgw69.live/" class="tile" target="_blank" data-category="other">
       <img src="https://img.stobjs.com/slots/pplay/bigboy-rush-1000.png?v=0.0.80?v=0.0.80" alt="" />
       <span>Bgw69</span>
     </a>
     
-  <a href="http://cpagg555.pesomax.com/?referralCode=qzv3818" class="tile" target="_blank">
+  <a href="http://cpagg555.pesomax.com/?referralCode=qzv3818" class="tile" target="_blank" data-category="other">
       <img src="https://images.191829838.com/wsd-images-prod/pmphpf5/merchant_resource/appdownloadicon/app_download_icon_pmphpf5_20250320174425.jpg" alt="" />
       <span>Pesomax</span>
     </a>
         
-    <a href="https://www.filbet.com/" class="tile" target="_blank">
+    <a href="https://www.filbet.com/" class="tile" target="_blank" data-category="fav">
       <img src="https://www.filbet.com/favicon.ico" alt="" />
       <span>Filbet</span>
     </a>
 
-    <a href="https://bet88.ph" class="tile-dark" target="_blank">
+    <a href="https://bet88.ph" class="tile-dark" target="_blank" data-category="other">
       <img src="https://d2ygwlcxd4dd5s.cloudfront.net/bet88_logo_stacked_new_with_ph_57361b7df4.svg" alt="" />
       <span>Bet88</span>
     </a>
 
-    <a href="https://www.megafunalo.com/" class="tile" target="_blank">
+    <a href="https://www.megafunalo.com/" class="tile" target="_blank" data-category="other">
       <img src="https://www.megafunalo.com/favicons/apple-touch-icon-120x120.png" alt="" />
       <span>Megafunalo</span>
     </a>
     
-    <a href="http://www.gbet777.win/?r=xrp5508" class="tile" target="_blank">
+    <a href="http://www.gbet777.win/?r=xrp5508" class="tile" target="_blank" data-category="other">
       <img src="https://www.gbet777.win/res/favicon.png" alt="" />
       <span>Gbet777</span>
     </a>
