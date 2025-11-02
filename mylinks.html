@@ -247,458 +247,490 @@
   </form>
   </center>
   <br>
+  
+  <!-- Category Filter -->
+<center>
+  <select id="categoryFilter" style="padding:8px 16px; border-radius:12px; font-size:14px; background:#f2f2f2; border:none; box-shadow: 5px 5px 10px rgba(0,0,0,0.2), -5px -5px 10px rgba(255,255,255,0.6);">
+    <option value="all">All Categories</option>
+    <option value="social">Social / Streaming</option>
+    <option value="design">Design / Image Tools</option>
+    <option value="tools">Media Tools</option>
+    <option value="ai">AI Tools</option>
+    <option value="dev">Development</option>
+    <option value="system">System Tools</option>
+    <option value="gov">Government</option>
+  </select>
+</center>
+
+<script>
+  const filter = document.getElementById("categoryFilter");
+
+  // Filter logic
+  filter.addEventListener("change", function() {
+    const category = this.value;
+    const tiles = document.querySelectorAll(".tile");
+
+    tiles.forEach(tile => {
+      tile.style.display = (category === "all" || tile.dataset.category === category)
+        ? "block"
+        : "none";
+    });
+  });
+
+  // 👇 Show "AI Tools" category by default
+  window.addEventListener("DOMContentLoaded", () => {
+    filter.value = "social";  // default category
+    filter.dispatchEvent(new Event("change"));
+  });
+</script>
+
   <div class="speed-dial">
-    <a href="https://winsangalang.github.io/slots" class="tile">
+    <a href="https://winsangalang.github.io/slots" class="tile" data-category="social">
       <img src="img/crazytime.png" alt="" />
       <span>Slots</span>
     </a>
 
 
    
-    <a href="https://facebook.com" class="tile" target="_blank">
+    <a href="https://facebook.com" class="tile" target="_blank" data-category="social">
       <img src="https://www.facebook.com/favicon.ico" alt="Facebook" />
       <span>Facebook</span>
     </a>
      
-   <a href="https://messenger.com/" class="tile" target="_blank">
+   <a href="https://messenger.com/" class="tile" target="_blank" data-category="social">
       <img src="https://static.xx.fbcdn.net/rsrc.php/yO/r/qa11ER6rke_.ico" alt="" />
       <span>Messenger</span>
     </a>
      
-    <a href="https://www.tiktok.com" class="tile" target="_blank">
+    <a href="https://www.tiktok.com" class="tile" target="_blank" data-category="social">
       <img src="https://www.tiktok.com/favicon.ico" alt="" />
       <span>Tiktok</span>
     </a>
     
-    <a href="https://m.youtube.com/" class="tile" target="_blank">
+    <a href="https://m.youtube.com/" class="tile" target="_blank" data-category="social">
       <img src="https://youtube.com/s/desktop/849f7a94/img/logos/favicon_48x48.png" alt="" />
       <span>YouTube</span>
     </a>
     
-    <a href="https://instagram.com" class="tile" target="_blank">
+    <a href="https://instagram.com" class="tile" target="_blank" data-category="social">
       <img src="https://static.cdninstagram.com/rsrc.php/v4/ys/r/aM-g435MtEX.png" alt="Instagram" />
       <span>Instagram</span>
     </a>
 
-<a href="https://flixtor.to/home" class="tile" target="_blank">
+<a href="https://flixtor.to/home" class="tile" target="_blank" data-category="social">
       <img src="https://flixtor.to/favicon.ico" alt="Flixtor.to" />
       <span>Flixtor.to</span>
     </a>
     
-    <a href="https://aniwatchtv.to/recently-updated" class="tile" target="_blank">
+    <a href="https://aniwatchtv.to/recently-updated" class="tile" target="_blank" data-category="social">
       <img src="https://aniwatchtv.to/favicon.ico" alt="aniwatchtv" />
       <span>AniwatchTV</span>
     </a>
     
-    <a href="https://9animetv.to/recently-updated" class="tile" target="_blank">
+    <a href="https://9animetv.to/recently-updated" class="tile" target="_blank" data-category="social">
       <img src="https://9animetv.to/images/favicon.png" alt="" />
       <span>9AnimeTv</span>
     </a>   
 
-<a href="https://collshp.com/sabosan" class="tile" target="_blank">
+<a href="https://collshp.com/sabosan" class="tile" target="_blank" data-category="social">
       <img src="https://shopee.ph/favicon.ico" alt="" />
       <span>Sabosan</span>
     </a>
      
-<a href="https://www.windy.com/-Waves-waves" class="tile" target="_blank">
+<a href="https://www.windy.com/-Waves-waves" class="tile" target="_blank" data-category="social">
       <img src="https://www.windy.com/favicon.ico" alt="Instagram" />
       <span>Windy</span>
     </a>
 
 
-    <a href="https://www.roblox.com/login" class="tile" target="_blank">
+    <a href="https://www.roblox.com/login" class="tile" target="_blank" data-category="social">
       <img src="https://images.rbxcdn.com/e854eb7b2951ac03edba9a2681032bba.ico" alt="" />
       <span>Roblox</span>
     </a>   
     
-   <a href="https://combocabal.com/sea/" class="tile" target="_blank">
+   <a href="https://combocabal.com/sea/" class="tile" target="_blank" data-category="social">
       <img src="https://combocabal.com/sea/favicon.ico?v=1.0" alt="" />
       <span>ComboCabal</span>
     </a>
      
-    <a href="https://netflix.com" class="tile" target="_blank">
+    <a href="https://netflix.com" class="tile" target="_blank" data-category="social">
       <img src="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico" alt="Netflix" />
       <span>Netflix</span>
     </a>
     
     
     
-   <a href="https://www.mobiletvshows.site/" class="tile" target="_blank">
+   <a href="https://www.mobiletvshows.site/" class="tile" target="_blank" data-category="social">
       <img src="https://www.mobiletvshows.site/favicon.ico" alt="" />
       <span>Mobiletv..</span>
     </a>
       
-   <a href="https://tvshows4mobile.org/" class="tile" target="_blank">
+   <a href="https://tvshows4mobile.org/" class="tile" target="_blank" data-category="social">
       <img src="https://tvshows4mobile.org/favicon.ico" alt="" />
       <span>Tvshows4..</span>
     </a>
    
-   <a href="https://keep.google.com/" class="tile" target="_blank">
+   <a href="https://keep.google.com/" class="tile" target="_blank" data-category="social">
       <img src="https://ssl.gstatic.com/keep/icon_2020q4v2_128.png" alt="" />
       <span>GKeep</span>
     </a>
      
-     <a href="https://github.com" class="tile" target="_blank">
+     <a href="https://github.com" class="tile" target="_blank" data-category="dev">
       <img src="https://github.githubassets.com/favicons/favicon.png" alt="GitHub" />
       <span>GitHub</span>
     </a>
     
- <a href="https://app.photoroom.com/create" class="tile" target="_blank">
+ <a href="https://app.photoroom.com/create" class="tile" target="_blank" data-category="design">
       <img src="https://www.photoroom.com/favicon.ico" alt="" />
       <span>Photoroom</span>
     </a>
     
-    <a href="https://remaker.ai/" class="tile" target="_blank">
+    <a href="https://remaker.ai/" class="tile" target="_blank" data-category="ai">
       <img src="https://remaker.ai/favicon.ico" alt="" />
       <span>Remaker</span>
     </a>
 
-    <a href="https://chatgpt.com/" class="tile" target="_blank">
+    <a href="https://chatgpt.com/" class="tile" target="_blank" data-category="ai">
       <img src="https://chatgpt.com/favicon.ico" alt="ChatGpt" />
       <span>ChatGpt</span>
     </a>
     
-    <a href="https://grok.com" class="tile" target="_blank">
+    <a href="https://grok.com" class="tile" target="_blank" data-category="ai">
       <img src="https://grok.com/favicon.ico" alt="" />
       <span>Grok Ai</span>
     </a>
     
-    <a href="https://www.blackbox.ai/" class="tile" target="_blank">
+    <a href="https://www.blackbox.ai/" class="tile" target="_blank" data-category="ai">
       <img src="https://www.blackbox.ai/blackbox-transparent.svg" alt="" />
       <span>Blackbox Ai</span>
     </a>
 
     
-    <a href="https://www.canva.com" class="tile" target="_blank">
+    <a href="https://www.canva.com" class="tile" target="_blank" data-category="design">
       <img src="https://www.canva.com/favicon.ico" alt="" />
       <span>Canva</span>
     </a>
     
-    <a href="https://www.myfonts.com/pages/whatthefont" class="tile" target="_blank">
+    <a href="https://www.myfonts.com/pages/whatthefont" class="tile" target="_blank" data-category="design">
       <img src="https://www.myfonts.com/cdn/shop/files/MyFonts_Favicon_small.png?v=1717748062" alt="" />
       <span>MyFonts</span>
     </a>
     
-    <a href="https://www.pngegg.com/" class="tile" target="_blank">
+    <a href="https://www.pngegg.com/" class="tile" target="_blank" data-category="design">
       <img src="https://www.pngegg.com/public/css/favicon.ico" alt="" />
       <span>PngEgg</span>
     </a>
      
-    <a href="https://ytmp3.as" class="tile" target="_blank">
+    <a href="https://ytmp3.as" class="tile" target="_blank" data-category="tools">
       <img src="https://ytmp3.as/favicon.ico" alt="" />
       <span>YTMp3</span>
     </a>
     
-   <a href="https://mp3quack.io/" class="tile" target="_blank">
+   <a href="https://mp3quack.io/" class="tile" target="_blank" data-category="tools">
       <img src="https://mp3quack.io/favicon.ico" alt="" />
       <span>Mp3Quack</span>
     </a> 
      
-   <a href="https://en.y2mate.is" class="tile" target="_blank">
+   <a href="https://en.y2mate.is" class="tile" target="_blank" data-category="tools">
       <img src="https://en.y2mate.is/favicon.ico" alt="" />
       <span>Y2mate</span>
     </a>
      
-    <a href="https://snaptik.app/en2" class="tile" target="_blank">
+    <a href="https://snaptik.app/en2" class="tile" target="_blank" data-category="tools">
       <img src="https://snaptik.app/img/icons-192.png" alt="" />
       <span>Snaptik</span>
     </a>
    
-<a href="https://tiktokio.com/" class="tile" target="_blank">
+<a href="https://tiktokio.com/" class="tile" target="_blank" data-category="tools">
       <img src="https://tiktokio.com/wp-content/uploads/2023/10/cropped-cropped-ico.webp" alt="" />
       <span>Tiktokio</span>
     </a>
    
-   <a href="https://en1.savefrom.net/" class="tile" target="_blank">
+   <a href="https://en1.savefrom.net/" class="tile" target="_blank" data-category="tools">
       <img src="https://en1.savefrom.net/favicon.ico" alt="" />
       <span>Savefrom</span>
     </a>
     
-   <a href="https://bravedown.com/" class="tile" target="_blank">
+   <a href="https://bravedown.com/" class="tile" target="_blank" data-category="tools">
       <img src="https://bravedown.com/favicon.ico" alt="" />
       <span>Bravedown</span>
     </a>
      
-    <a href="https://snapinsta.to" class="tile" target="_blank">
+    <a href="https://snapinsta.to" class="tile" target="_blank" data-category="tools">
       <img src="https://snapinsta.to/favicon.ico" alt="" />
       <span>SnapInsta</span>
     </a>
     
-    <a href="https://www.imagetotext.info/" class="tile" target="_blank">
+    <a href="https://www.imagetotext.info/" class="tile" target="_blank" data-category="tools">
       <img src="https://www.imagetotext.info/web_assets/frontend/img/tool/1.png?v=3.9" alt="" />
       <span>ImageToText</span>
     </a>
     
-    <a href="https://www.remove.bg/" class="tile" target="_blank">
+    <a href="https://www.remove.bg/" class="tile" target="_blank" data-category="design">
       <img src="https://www.remove.bg/favicon.ico" alt="Removebg" />
       <span>RemoveBG</span>
     </a>
     
-    <a href="https://cloudconvert.com/" class="tile" target="_blank">
+    <a href="https://cloudconvert.com/" class="tile" target="_blank" data-category="tools">
       <img src="https://cloudconvert.com/images/logo_flat_32.png" alt="" />
       <span>Cloudconvert</span>
     </a>
     
-     <a href="https://cloudconvert.com/webp-to-jpg" class="tile" target="_blank">
+     <a href="https://cloudconvert.com/webp-to-jpg" class="tile" target="_blank" data-category="tools">
       <img src="https://cloudconvert.com/images/logo_flat_32.png" alt="" />
       <span>Webp-to-Jpg</span>
     </a>
      
     
-    <a href="https://imageresizer.com/" class="tile" target="_blank">
+    <a href="https://imageresizer.com/" class="tile" target="_blank" data-category="tools">
       <img src="https://imageresizer.com/favicon.ico" alt="" />
       <span>ImgResizer</span>
     </a>
      
     
-      <a href="https://www.reduceimages.com/" class="tile" target="_blank">
+      <a href="https://www.reduceimages.com/" class="tile" target="_blank" data-category="tools">
       <img src="https://www.reduceimages.com/favicon.ico" alt="Removebg" />
       <span>ReduceImg</span>
     </a>
     
-    <a href="https://www.iloveimg.com/" class="tile" target="_blank">
+    <a href="https://www.iloveimg.com/" class="tile" target="_blank" data-category="tools">
       <img src="https://www.iloveimg.com/img/favicons-img/favicon-16x16.png" alt="" />
       <span>iLoveImg</span>
     </a>
     
-    <a href="https://www.ilovepdf.com/" class="tile" target="_blank">
+    <a href="https://www.ilovepdf.com/" class="tile" target="_blank" data-category="tools">
       <img src="https://www.ilovepdf.com/img/app-icon.png" alt="" />
       <span>iLovePdf</span>
     </a>
     
-    <a href="https://www.cutout.pro/" class="tile" target="_blank">
+    <a href="https://www.cutout.pro/" class="tile" target="_blank" data-category="design">
       <img src="https://www.cutout.pro/favicon.ico" alt="" />
       <span>CutOutPro</span>
     </a>
     
-   <a href="https://www.pixelcut.ai/home" class="tile" target="_blank">
+   <a href="https://www.pixelcut.ai/home" class="tile" target="_blank" data-category="design">
       <img src="https://www.pixelcut.ai/favicon.ico" alt="" />
       <span>PixelCut</span>
     </a>
      
-   <a href="https://linktr.ee/" class="tile" target="_blank">
+   <a href="https://linktr.ee/" class="tile" target="_blank" data-category="dev">
       <img src="https://linktr.ee/favicon.ico" alt="" />
       <span>Linktree</span>
     </a>
      
-    <a href="https://temp-mail.org/en/" class="tile" target="_blank">
+    <a href="https://temp-mail.org/en/" class="tile" target="_blank" data-category="dev">
       <img src="https://temp-mail.org/favicon.ico" alt="" />
       <span>Temp-Mail</span>
     </a>
     
-    <a href="https://icon-icons.com/" class="tile" target="_blank">
+    <a href="https://icon-icons.com/" class="tile" target="_blank" data-category="design">
       <img src="https://icon-icons.com/favicon.ico" alt="" />
       <span>Icon-icons</span>
     </a>
       
-    <a href="https://iconscout.com/" class="tile" target="_blank">
+    <a href="https://iconscout.com/" class="tile" target="_blank" data-category="design">
       <img src="https://iconscout.com/favicon-96x96.png" alt="" />
       <span>IconScout</span>
     </a>
     
-    <a href="https://sketch2app.io" class="tile" target="_blank">
+    <a href="https://sketch2app.io" class="tile" target="_blank" data-category="ai">
       <img src="https://sketch2app.io/favicon.ico" alt="" />
       <span>Sketch2App</span>
     </a>
 
-   <a href="https://www.openai.fm" class="tile" target="_blank">
+   <a href="https://www.openai.fm" class="tile" target="_blank" data-category="tools">
       <img src="https://www.openai.fm/favicon.ico" alt="" />
       <span>OpenAI.fm</span>
     </a>
      
-   <a href="https://elevenlabs.io/" class="tile" target="_blank">
+   <a href="https://elevenlabs.io/" class="tile" target="_blank" data-category="tools">
       <img src="https://elevenlabs.io/favicon.ico" alt="" />
       <span>ElevenLabs</span>
     </a>
     
-   <a href="https://voicemaker.in/" class="tile" target="_blank">
+   <a href="https://voicemaker.in/" class="tile" target="_blank" data-category="tools">
       <img src="https://voicemaker.in/favicon.ico" alt="" />
       <span>VoiceMaker</span>
     </a>
     
-    <a href="https://viewsourcepage.com/" class="tile" target="_blank">
+    <a href="https://viewsourcepage.com/" class="tile" target="_blank" data-category="dev">
       <img src="https://viewsourcepage.com/wp-content/uploads/2020/10/cropped-favicon-1-32x32.png" alt="" />
       <span>ViewSourc..</span>
     </a>
      
-   <a href="https://www.view-page-source.com/" class="tile" target="_blank">
+   <a href="https://www.view-page-source.com/" class="tile" target="_blank" data-category="dev">
       <img src="https://www.view-page-source.com/favicon.ico" alt="" />
       <span>ViewPageS..</span>
     </a>
    
-    <a href="https://iplocation.io/view-html-source-code" class="tile" target="_blank">
+    <a href="https://iplocation.io/view-html-source-code" class="tile" target="_blank" data-category="dev">
       <img src="https://iplocation.io/images/favicon/favicon-64x64.png" alt="" />
       <span>IPLocation</span>
     </a>
     
     
-   <a href="https://www.reweb.so/" class="tile" target="_blank">
+   <a href="https://www.reweb.so/" class="tile" target="_blank" data-category="dev">
       <img src="https://www.reweb.so/icon.svg" alt="" />
       <span>Reweb</span>
     </a>
      
-    <a href="https://cssgridgenerator.io/" class="tile" target="_blank">
+    <a href="https://cssgridgenerator.io/" class="tile" target="_blank" data-category="dev">
       <img src="https://cssgridgenerator.io/favicon.ico" alt="" />
       <span>CSSGridGen</span>
     </a>
 
-    <a href="https://darkcssweb.com/" class="tile" target="_blank">
+    <a href="https://darkcssweb.com/" class="tile" target="_blank" data-category="dev">
       <img src="https://darkcssweb.com/wp-content/uploads/2024/09/logo.png" alt="" />
       <span>DarkCssWeb</span>
     </a>
 
-    <a href="https://romsfun.com/" class="tile" target="_blank">
+    <a href="https://romsfun.com/" class="tile" target="_blank" data-category="system">
       <img src="https://romsfun.com/wp-content/uploads/2021/04/rom.png" alt="" />
       <span>Romsfun</span>
       
-     <a href="https://github.com/AeolusUX/ArkOS-R3XS/releases" class="tile" target="_blank">
+     <a href="https://github.com/AeolusUX/ArkOS-R3XS/releases" class="tile" target="_blank"  data-category="system">
       <img src="https://raw.githubusercontent.com/AeolusUX/ArkOS-R3XS/main/logo.bmp" alt="" />
       <span>ArkOS-R3XS</span>
     </a>    
-     <a href="https://www.retroarch.com/?page=platforms" class="tile" target="_blank">
+     <a href="https://www.retroarch.com/?page=platforms" class="tile" target="_blank" data-category="system">
       <img src="https://www.retroarch.com/images/nsw.png" alt="" />
       <span>Retroarch</span>
     </a>
     
-    <a href="https://batocera.org/download" class="tile" target="_blank">
+    <a href="https://batocera.org/download" class="tile" target="_blank" data-category="system">
       <img src="https://batocera.org/images/head/logo-tri.png" alt="" />
       <span>Batocera</span>
     </a>
 
-    <a href="https://etcher.balena.io/" class="tile" target="_blank">
+    <a href="https://etcher.balena.io/" class="tile" target="_blank" data-category="system">
       <img src="https://etcher.balena.io/images/favicon.png" alt="" />
       <span>Etcher</span>
     </a>
-    <a href="https://filecr.com/en/" class="tile" target="_blank">
+    <a href="https://filecr.com/en/" class="tile" target="_blank" data-category="system">
       <img src="https://filecr.com/favicon.png" alt="" />
       <span>FileCR</span>
     </a>
 
-    <a href="https://ninite.com/" class="tile" target="_blank">
+    <a href="https://ninite.com/" class="tile" target="_blank" data-category="system">
       <img src="https://ninite.com/favicon.ico" alt="" />
       <span>Ninite</span>
     </a>
         
-   <a href="https://www.snappy-driver-installer.org/" class="tile" target="_blank">
+   <a href="https://www.snappy-driver-installer.org/" class="tile" target="_blank" data-category="system">
       <img src="https://sdi-tool.org/html/images/favicon.ico" alt="" />
       <span>SDI-Tool</span>
     </a>
      
-    <a href="https://win10lite.com" class="tile" target="_blank">
+    <a href="https://win10lite.com" class="tile" target="_blank" data-category="system">
       <img src="https://win10lite.com/wp-content/uploads/2024/01/windows-10-lite-150x150.png" alt="" />
       <span>Win10Lite</span>
     </a>
      
-<a href="https://win10lite.com/windows-11-lite/" class="tile" target="_blank">
+<a href="https://win10lite.com/windows-11-lite/" class="tile" target="_blank" data-category="system">
       <img src="https://windowstan.com/wp-content/uploads/2022/09/Microsoft-Windows-11-Logo-Icon-Windowstan.png" alt="" />
       <span>Tiny11</span>
     </a>
 
-   <a href="https://windowstan.com/" class="tile" target="_blank">
+   <a href="https://windowstan.com/" class="tile" target="_blank" data-category="system">
       <img src="https://windowstan.com/wp-content/uploads/2024/04/cropped-Windowstan-Logo-new-192x192.png" alt="" />
       <span>WindowsTan</span>
     </a>
 
-   <a href="https://fedoraproject.org/workstation/download" class="tile" target="_blank">
-      <img src="https://fedoraproject.org/favicon.ico" alt="" />
-      <span>Fedora</span>
-    </a>
-
-     <a href="https://sergeistrelec.name/winpe-10-8-sergei-strelec-english/" class="tile" target="_blank">
+     <a href="https://sergeistrelec.name/winpe-10-8-sergei-strelec-english/" class="tile" target="_blank" data-category="system">
       <img src="https://sergeistrelec.name/favicon.ico" alt="" />
       <span>SergeiStrelec</span>
     </a>
 
-    <a href="https://ventoy.net/" class="tile" target="_blank">
+    <a href="https://ventoy.net/" class="tile" target="_blank" data-category="system">
       <img src="https://ventoy.net/favicon.ico" alt="" />
       <span>Ventoy</span>
     </a>
 
- <a href="https://rufus.ie/en/" class="tile" target="_blank">
+ <a href="https://rufus.ie/en/" class="tile" target="_blank" data-category="system">
       <img src="https://rufus.ie/favicon.ico" alt="" />
       <span>Rufus</span>
     </a>
 
-   <a href="https://medicatusb.com/" class="tile" target="_blank">
+   <a href="https://medicatusb.com/" class="tile" target="_blank" data-category="system">
       <img src="https://medicatusb.com/favicon.png" alt="" />
       <span>MedicatUSB</span>
     </a>
-    <a href="https://www.android-x86.org" class="tile" target="_blank">
+    <a href="https://www.android-x86.org" class="tile" target="_blank" data-category="system">
       <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Android-x86.png" alt="" />
       <span>Android-x86</span>
     </a>
 
-    <a href="https://www.autoruns.org/" class="tile" target="_blank">
+    <a href="https://www.autoruns.org/" class="tile" target="_blank" data-category="system">
       <img src="https://www.autoruns.org/img/autoruns-download.webp" alt="" />
       <span>Autoruns</span>
     </a>
      
-    <a href="https://christitus.com/windows-tool/" class="tile" target="_blank">
+    <a href="https://christitus.com/windows-tool/" class="tile" target="_blank" data-category="system">
       <img src="https://christitus.com/images/favicon.png" alt="" />
       <span>Christitus</span>
     </a>
     
-     <a href="https://www.hirensbootcd.org/" class="tile" target="_blank">
+     <a href="https://www.hirensbootcd.org/" class="tile" target="_blank" data-category="system">
       <img src="https://www.hirensbootcd.org/favicon.ico" alt="" />
       <span>HirensBootCD</span>
     </a>
   
-   <a href="https://www.hdsentinel.com/" class="tile" target="_blank">
+   <a href="https://www.hdsentinel.com/" class="tile" target="_blank" data-category="system">
       <img src="https://www.hdsentinel.com/favicon.ico" alt="" />
       <span>HDSentinel</span>
     </a>
      
-    <a href="https://www.cpuid.com/softwares/cpu-z.html" class="tile" target="_blank">
+    <a href="https://www.cpuid.com/softwares/cpu-z.html" class="tile" target="_blank" data-category="system">
       <img src="https://www.cpuid.com/medias/images/softwares/cpu-z.svg" alt="" />
       <span>CPU-Z</span>
     </a>
      
-     <a href="https://www.grc.com/validrive.htm" class="tile" target="_blank">
+     <a href="https://www.grc.com/validrive.htm" class="tile" target="_blank" data-category="system">
       <img src="https://www.grc.com/favicon.ico" alt="" />
       <span>ValiDrive</span>
     </a>
      
-   <a href="https://fast.com/" class="tile" target="_blank">
+   <a href="https://fast.com/" class="tile" target="_blank" data-category="social">
       <img src="https://fast.com/assets/favicons/favicon-96x96.png" alt="" />
       <span>Fast.com</span>
     </a>
     
-   <a href="https://www.speedtest.net/" class="tile" target="_blank">
+   <a href="https://www.speedtest.net/" class="tile" target="_blank" data-category="social">
       <img src="https://www.speedtest.net/favicon.ico" alt="" />
       <span>Speedtest</span>
     </a>
 
-    <a href="https://orus.bir.gov.ph/home" class="tile" target="_blank">
+    <a href="https://orus.bir.gov.ph/home" class="tile" target="_blank" data-category="gov">
       <img src="https://orus.bir.gov.ph/assets/bir_logo.png" alt="" />
       <span>BIR</span>
     </a>
    
-   <a href="https://national-id.gov.ph/" class="tile" target="_blank">
+   <a href="https://national-id.gov.ph/" class="tile" target="_blank" data-category="gov">
       <img src="https://national-id.gov.ph/icon.png" alt="" />
       <span>Nat.ID</span>
     </a>
      
-   <a href="https://portal.lto.gov.ph/" class="tile" target="_blank">
+   <a href="https://portal.lto.gov.ph/" class="tile" target="_blank" data-category="gov">
       <img src="https://portal.lto.gov.ph/i/com/dermalog/dl_a_lto_common/pics/lto_logo.png" alt="" />
       <span>LTO</span>
     </a>
      
-<a href="https://www.psaserbilis.com.ph" class="tile" target="_blank">
+<a href="https://www.psaserbilis.com.ph" class="tile" target="_blank" data-category="gov">
       <img src="https://www.psaserbilis.com.ph/favicon.ico" alt="" />
       <span>PSA</span>
     </a>
 
-   <a href="https://clearance.nbi.gov.ph/" class="tile" target="_blank">
+   <a href="https://clearance.nbi.gov.ph/" class="tile" target="_blank" data-category="gov">
       <img src="https://clearance.nbi.gov.ph/favicon.ico" alt="" />
       <span>NBI</span>
     </a>
      
-   <a href="https://pnpclearance.ph/" class="tile" target="_blank">
+   <a href="https://pnpclearance.ph/" class="tile" target="_blank" data-category="gov">
       <img src="https://www.pnpcocpo.com/wp-content/uploads/2020/06/Philippine_National_Police_Badge.png" alt="" />
       <span>PNP</span>
     </a>
    
-    <a href="https://www.pagibigfundservices.com/virtualpagibig/Default.aspx" class="tile" target="_blank">
+    <a href="https://www.pagibigfundservices.com/virtualpagibig/Default.aspx" class="tile" target="_blank" data-category="gov">
       <img src="https://www.pagibigfundservices.com/virtualpagibig/images/logo.png" alt="" />
       <span>Pag-ibig</span>
     </a>
