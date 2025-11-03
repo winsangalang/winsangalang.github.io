@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preview</title>
+
+<style>
+  /* --- General Layout --- */
+  body {
+    font-family: "Poppins", Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #d6d8e6, #f0f1f7);
+    color: #333;
+    transition: background 0.3s ease;
+  }
+
+  h1 {
+    text-align: center;
+    margin: 30px 0;
+    color: #333;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+  }
+
+  /* --- Navbar --- */
+  .navbar {
+    background: #2c2f38;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 60px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .navbar > div {
+    display: flex;
+    gap: 5px;
+  }
+
+  .navbar a,
+  .navbar button {
+    color: #f5f5f5;
+    text-decoration: none;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 12px 18px;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  .navbar a:hover,
+  .navbar button:hover {
+    background-color: #3e4450;
+    transform: scale(1.05);
+  }
+
+  /* --- Side Panel --- */
+  .side-panel {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 3px 0 10px rgba(0,0,0,0.3);
+    overflow-x: hidden;
+    transition: width 0.4s ease;
+    padding-top: 70px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+
+  .side-panel a {
+    padding: 14px 24px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    display: block;
+    transition: background 0.25s ease, padding-left 0.25s ease;
+  }
+
+  .side-panel a:hover {
+    background-color: #f0f0f0;
+    padding-left: 30px;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #555;
+  }
+
+  /* --- Product Grid --- */
+  .content {
+    padding: 20px 30px;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 24px;
+  }
+
+  .product {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  }
+
+  .product img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .product-info {
+    text-align: center;
+    padding: 12px 0;
+    font-size: 13px;
+  }
+
+  .icon-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 6px;
+  }
+
+  .icon-links a {
+    background: #2c2f38;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    text-decoration: none;
+    transition: background 0.25s ease;
+  }
+
+  .icon-links a:hover {
+    background: #575d6b;
+  }
+
+  @media (max-width: 600px) {
+    .navbar a,
+    .navbar button {
+      font-size: 14px;
+      padding: 10px 12px;
+    }
+
+    .product-grid {
+      gap: 16px;
+    }
+  }
+</style>
+</head>
+<body onload="filterProducts('all')">
+
+<!-- Navigation bar -->
+<div class="navbar">
+  <a href="#" onclick="filterProducts('all')">🏠 Home</a>
+  <button onclick="openPanel()">📂 Categories</button>
+  <div>
+    <a href="https://winsangalang.github.io" target="_blank">🌐 MyLinks</a>
+    <a href="https://www.tiktok.com/@win11387?_t=ZS-8yo5CAVr6tF&_r=1" target="_blank">📞 Contact</a>
+  </div>
+</div>
+
+<!-- Side panel -->
+<div id="categoryPanel" class="side-panel">
+  <span class="close-btn" onclick="closePanel()">×</span>
+  
+  <a href="#" onclick="filterProducts('electronics'); closePanel()">Electronics</a>
+  <a href="#" onclick="filterProducts('mobiles'); closePanel()">Mobile Phones</a>
+  <a href="#" onclick="filterProducts('gadgets'); closePanel()">Smart Gadgets</a>
+  <a href="#" onclick="filterProducts('computers'); closePanel()">Computers & Laptops</a>
+  <a href="#" onclick="filterProducts('beauty'); closePanel()">Beauty & Personal Care</a>
+  <a href="#" onclick="filterProducts('fashion'); closePanel()">Fashion</a>
+  <a href="#" onclick="filterProducts('pets'); closePanel()">Pet Supplies</a>
+  <a href="#" onclick="filterProducts('household'); closePanel()">Household Essentials</a>
+  <a href="#" onclick="filterProducts('kids'); closePanel()">Kids & Baby</a>
+  <a href="#" onclick="filterProducts('sports'); closePanel()">Sports & Outdoors</a>
+  <a href="#" onclick="filterProducts('office supplies'); closePanel()">Stationery & Office</a>
+  <a href="#" onclick="filterProducts('health'); closePanel()">Health & Wellness</a>
+</div>
+
+<!-- Product grid -->
+<div class="content">
+  <h1 id="page-title"></h1>
+  <div class="product-grid">
+
+    <!-- Example Product -->
+    <div class="product" data-category="office supplies">
+      <img src="https://shervz11387.github.io/img/preview.jpg" alt="Preview">
+      <div class="product-info">
+        <h3>I hope you like it 😊</h3>
+        <div class="icon-links">
+          <a href="#" onclick="downloadFile('https://shervz11387.github.io/img/preview.jpg')">Download</a>
+          <a href="https://shervz11387.github.io/img/preview.jpg" target="_blank">Open Image</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Script -->
+<script>
+function openPanel() {
+  document.getElementById("categoryPanel").style.width = "260px";
+}
+
+function closePanel() {
+  document.getElementById("categoryPanel").style.width = "0";
+}
+
+function filterProducts(category) {
+  const products = document.querySelectorAll('.product');
+  const title = document.getElementById('page-title');
+
+  products.forEach(product => {
+    if (category === 'all' || product.dataset.category === category) {
+      product.style.display = 'flex';
+    } else {
+      product.style.display = 'none';
+    }
+  });
+
+  title.textContent = category === 'all' ? 'My Finds' : 
+    category.charAt(0).toUpperCase() + category.slice(1);
+}
+
+/* --- Force File Download --- */
+function downloadFile(url) {
+  const fileName = url.substring(url.lastIndexOf('/') + 1);
+  const a = document.createElement('a');
+  a.href = url;
+  a.setAttribute('download', fileName);
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+</script>
+
+</body>
+</html>
