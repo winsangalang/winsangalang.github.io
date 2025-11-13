@@ -1,4 +1,4 @@
-const performersTop = ["jojosbizarrelyf","maisiemiller","xiaobrunscheen","kailyybaby17","emmicanfly","avilyn","amili_kron","_l_o_r_r_y_","angel_soo","sofia__home","love_polly","melanie_grant","paradi_se","ella_lee15","amy_innocent_","lux_angel","baby___lola","mrs_slimthug","silkencrave","cutebrutality","alettaeve","lily_lv","emma_clon","camilla_kelly","victoria_calloway","cutealexandre","eveluin_leeds","malvina_doll","kathe_littlee","sweetlittlevenus"];
+const performersTop = ["annabellegallego","jojosbizarrelyf","maisiemiller","xiaobrunscheen","kailyybaby17","emmicanfly","avilyn","amili_kron","_l_o_r_r_y_","angel_soo","sofia__home","love_polly","melanie_grant","paradi_se","ella_lee15","amy_innocent_","lux_angel","baby___lola","mrs_slimthug","silkencrave","cutebrutality","alettaeve","lily_lv","emma_clon","camilla_kelly","victoria_calloway","cutealexandre","eveluin_leeds","malvina_doll","kathe_littlee","sweetlittlevenus"];
   const containerTop = document.getElementById('linksTop');
 
   performersTop.forEach(name => {
