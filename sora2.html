@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sora 2 - AI Video Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 60%;
+            padding: 10px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #ff5252;
+        }
+        video {
+            margin-top: 20px;
+            max-width: 80%;
+            border-radius: 10px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Sora 2</h1>
+    <p>Your AI-powered video generator. Enter a prompt and watch magic happen!</p>
+    <input type="text" id="prompt" placeholder="e.g., A futuristic city at sunset">
+    <br>
+    <button onclick="generateVideo()">Generate Video</button>
+    <br>
+    <video id="videoPlayer" controls class="hidden">
+        <source src="" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
+    <script>
+        function generateVideo() {
+            const prompt = document.getElementById('prompt').value;
+            if (!prompt) {
+                alert('Please enter a prompt!');
+                return;
+            }
+            
+            // Simulate AI processing (in a real app, call an API here)
+            alert(`Sora 2 is generating a video for: "${prompt}"`);
+            
+            // Placeholder: Load a sample video (replace with real generated video URL)
+            const videoPlayer = document.getElementById('videoPlayer');
+            videoPlayer.src = 'https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4'; // Example public sample video
+            videoPlayer.classList.remove('hidden');
+            videoPlayer.load();
+            videoPlayer.play();
+        }
+    </script>
+</body>
+</html>
