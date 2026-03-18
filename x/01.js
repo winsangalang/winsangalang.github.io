@@ -10,7 +10,7 @@ const performersTop = ["annybastet","criistal_blossom","little_yena","hikomi_","
     containerTop.appendChild(document.createTextNode(' '));
   });
 
-  const performers18 = ["lucsin","ur_sweetgirl_clarace"];
+  const performers18 = ["cruella_summer601"," lucsin","ur_sweetgirl_clarace"];
   const container18 = document.getElementById('links18');
 
   performers18.forEach(name => {
