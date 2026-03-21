@@ -202,11 +202,12 @@
   <a href="#" onclick="filterProducts('sports'); closePanel()">Sports & Outdoors</a>
   <a href="#" onclick="filterProducts('office supplies'); closePanel()">Stationery & Office Supplies</a>
   <a href="#" onclick="filterProducts('health'); closePanel()">Health & Wellness</a>
+  
 </div>
 
 
 <div class="content">
-<h1 id="page-title">My Finds</h1>
+<h1 id="page-title">Welcome!</h1>
 <div class="product-grid">
 
 <!-- stationery & office supplies -->
@@ -337,7 +338,7 @@ function filterProducts(category) {
     }
   });
 
-  title.textContent = category === 'all' ? 'My Finds' : `${category.charAt(0).toUpperCase() + category.slice(1)}`;
+  title.textContent = category === 'all' ? 'Welcome!' : `${category.charAt(0).toUpperCase() + category.slice(1)}`;
 }
 </script>
 
